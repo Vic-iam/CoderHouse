@@ -1,0 +1,35 @@
+header{
+   background-color:  #DDD0C8;
+   color: #323232;
+   height: 100px;
+   width: 100%;
+   padding: 20px;
+
+   top: 0;
+   position: fixed;
+
+   box-shadow: 0 1px 2px #323232;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+
+.divLogo{
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.divLinks{
+    display: flex;
+    gap: 20px;
+    font-size: 1.4rem;
+}
+
+a{
+    text-decoration: none;
+    color: #323232;
+}
