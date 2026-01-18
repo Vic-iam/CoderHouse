@@ -2,10 +2,10 @@ import "./App.css";
 import { Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Home from "./routes/Home";
-import Products from "./routes/Products";
 import Contacto from "./routes/Contacto";
-import Cart from "./components/Cart";
 import Footer from "./components/Footer";
+import ItemListContainer from "./components/itemListContainer";
+import CartWidget from "./components/CartWidget";
 
 function App() {
   return (
@@ -13,9 +13,9 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/Products" element={<Products />} />
+        <Route path="/ItemList" element={<ItemListContainer name="Sara" />} />
         <Route path="/Contacto" element={<Contacto />} />
-        <Route path="/Cart" element={<Cart />} />
+        <Route path="/Cart" element={<CartWidget />} />
       </Routes>
       <Footer />
     </>

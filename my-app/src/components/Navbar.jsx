@@ -2,7 +2,7 @@
 import React from "react";
 import styles from "./styles/Navbar.module.css";
 import { Link } from "react-router-dom";
-import { CiShoppingCart } from "react-icons/ci";
+import CartWidget from "./CartWidget";
 
 
 function Navbar() {
@@ -14,9 +14,9 @@ function Navbar() {
         </div>
         <div className={styles.divLinks}>
              <Link to="/">Inicio</Link>
-             <Link to="/Products">Productos</Link>
+             <Link to="/ItemList">Productos</Link>
              <Link to="/Contacto">Contacto</Link>
-             <Link to="/Cart"><CiShoppingCart />Shop</Link>
+             <CartWidget />
         </div>
       </nav>
     </header>
