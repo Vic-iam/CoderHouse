@@ -6,11 +6,12 @@ import { Link } from "react-router-dom";
 function CartWidget() {
   return (
     <div className={styles.cartWidget}>
-
-      <Link to="/Cart">
-        <CiShoppingCart />
-        Carrito
-      </Link>
+      <div className={styles.cartLink}>
+        <Link to="/Cart">
+          <CiShoppingCart />
+          Carrito
+        </Link>
+      </div>
     </div>
   );
 }
