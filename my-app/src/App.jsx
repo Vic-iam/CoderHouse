@@ -10,6 +10,7 @@ import CartWidget from "./components/CartWidget";
 function App() {
   return (
     <>
+
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
@@ -18,6 +19,7 @@ function App() {
         <Route path="/Cart" element={<CartWidget />} />
       </Routes>
       <Footer />
+      
     </>
   );
 }
