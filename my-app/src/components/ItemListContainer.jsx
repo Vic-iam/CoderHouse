@@ -12,26 +12,27 @@ function ItemListContainer() {
         <h1>Lista de productos</h1>
       </div>
 
-      
       <div className={style.containerManga}>
-      {tumanga.map((producto) => (
-        <div className={style.mangaCard} key={producto.id}>
-          <div className={style.imageManga}>
-            <img src={producto.image} alt={producto.nombre} />
-          </div>
+        {tumanga.map((producto) => (
+          <div className={style.mangaCard} key={producto.id}>
+            <div className={style.imageManga}>
+              <img src={producto.image} alt={producto.nombre} />
+            </div>
 
-          <div className={style.infoManga}>
-            <h2>{producto.nombre}</h2>
-            <p>Volumen: {producto.volumen}</p>
-            <p>Precio: ${producto.precio}</p>
-            <Link to={`/Item/${producto.id}`} className={style.linkDetail}>
-              Ver detalle
-            </Link>
+            <div className={style.infoManga}>
+              <h2>{producto.nombre}</h2>
+              <p>Volumen: {producto.volumen}</p>
+              <p>Precio: ${producto.precio}</p>
+              <Link to={`/Item/${producto.id}`} className={style.linkDetail}>
+                Ver detalle
+              </Link>
+            </div>
+
+            <ItemCount stock={producto.stock} />
+            <h3>Stock: {producto.stock}</h3>
           </div>
-        </div>
-      ))}
+        ))}
       </div>
-      <ItemCount  />
     </div>
   );
 }

@@ -1,0 +1,15 @@
+.containerItemCount{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    background-color: #d6d6d6;
+    border: 1px solid #d4d4d4;
+}
+
+button{
+    background-color: #d6d6d6;
+    font-size: 1.2rem;
+    border: none;
+    cursor: pointer;
+}

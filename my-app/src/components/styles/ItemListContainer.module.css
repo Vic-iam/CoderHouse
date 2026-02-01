@@ -58,6 +58,14 @@
 
 }
 
+.mangaCard h3{
+    font-size: 1rem;
+    font-weight: normal;
+    opacity: 0.8;
+    text-align: center;
+    padding: 10px;
+}
+
 @media (max-width: 768px) {
 
     .titleListContainer {

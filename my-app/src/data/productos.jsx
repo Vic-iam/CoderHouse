@@ -12,6 +12,7 @@ const mangas = [
     volumen: 1,
     precio: 9500,
     image: dandadan1,
+    stock: 10,
   },
   {
     id: 2,
@@ -19,6 +20,7 @@ const mangas = [
     volumen: 2,
     precio: 9500,
     image: dandadan2,
+    stock: 10,
   },
   {
     id: 3,
@@ -26,6 +28,7 @@ const mangas = [
     volumen: 3,
     precio: 9500,
     image: dandadan3,
+    stock: 10,
   },
   {
     id: 4,
@@ -33,6 +36,7 @@ const mangas = [
     volumen: 4,
     precio: 9500,
     image: dandadan4,
+    stock: 10,
   },
   {
     id: 5,
@@ -40,6 +44,7 @@ const mangas = [
     volumen: 5,
     precio: 9500,
     image: dandadan5,
+    stock: 10,
   },
   {
     id: 6,
@@ -47,6 +52,7 @@ const mangas = [
     volumen: 6,
     precio: 9500,
     image: dandadan6,
+    stock: 10,
   },
 ];
 
