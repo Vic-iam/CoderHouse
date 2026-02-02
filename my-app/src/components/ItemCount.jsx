@@ -23,9 +23,11 @@ const ItemCount = () => {
 
   return (
     <div className={style.containerItemCount}>
+      <div className={style.styleCount}>
       <button className={style.buttonRestar} onClick={restar}>-</button>
       <span>{count}</span>
       <button className={style.buttonSumar} onClick={sumar}>+</button>
+      </div>
       <div>
         <button className={style.buttonComprar} onClick={() => setComprar(true)}>Comprar</button>
       </div>

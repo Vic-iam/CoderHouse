@@ -1,9 +1,15 @@
 footer {
     background-color: #DDD0C8;
     color: #323232;
-    height: 100px;
+}
 
-    bottom: 0;
-    position: fixed;
-    width: 100%;
+.footerContainer {
+    max-width: 1400px;
+    margin: auto;
+    padding: 40px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 20px;
 }

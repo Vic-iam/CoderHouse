@@ -1,13 +1,17 @@
-import styles from './styles/Footer.module.css'
+import style from './styles/Footer.module.css'
 
 function Footer() {
 
-  return(
-  <footer>
+  return (
+    <footer>
 
-    <h1>Esto es el footer</h1>
+      <div className={style.footerContainer}>
 
-  </footer>
+
+        <h1>Esto es el footer</h1>
+
+      </div>
+    </footer>
 
 
   );
