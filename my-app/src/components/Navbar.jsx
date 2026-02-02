@@ -12,7 +12,7 @@ function Navbar() {
     <header className={style.header}>
       <nav>
         <div className={style.divLogo}>
-          <h1>TuManga</h1>
+          <h1>tuManga</h1>
         </div>
 
         <div

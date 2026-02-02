@@ -16,7 +16,6 @@
 }
 
 .buttonRestar, .buttonSumar{
-    background-color: silver;
     display: flex;
     justify-content: center;
     align-items: center;
