@@ -6,7 +6,7 @@ const ItemCount = ( {stock} ) => {
   const [comprar, setComprar] = useState(false);
 
    const sumar = () => {
-    if (count < 10) {
+    if (count < stock) {
       setCount(count + 1);
     }
    }
@@ -23,9 +23,11 @@ const ItemCount = ( {stock} ) => {
 
   return (
     <div className={style.containerItemCount}>
-      <div className={style.styleCount}>
+      <div  className={style.styleCount}>
       <button className={style.buttonRestar} onClick={restar}>-</button>
+      <div key={count} className={style.countNumber}>
       <span>{count}</span>
+      </div>
       <button className={style.buttonSumar} onClick={sumar}>+</button>
       </div>
       <div>
