@@ -41,7 +41,6 @@ button{
     display: inline-block;
     animation: countPop 0.25s ease;
     font-size: 1.2rem;
-    font-weight: bold;
 }
 
 @keyframes countPop {
