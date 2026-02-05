@@ -1,9 +1,9 @@
 import React from 'react'
 
 const Item = ( {id} ) => {
-    
+
   return (
-    <div>Item</div>
+    <div>  </div>
   )
 }
 
