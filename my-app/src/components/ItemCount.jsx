@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import style from "./styles/ItemCount.module.css";
 
-const ItemCount = ( {stock} ) => {
+const ItemCount = ({ stock }) => {
   const [count, setCount] = useState(1);
   const [comprar, setComprar] = useState(false);
 

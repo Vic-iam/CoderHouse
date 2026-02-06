@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 
 import tumanga from "../data/productos.jsx";
 import ItemCount from "./ItemCount.jsx";
+import Item from "./Item.jsx";
 
 function ItemListContainer() {
   return (
@@ -23,9 +24,7 @@ function ItemListContainer() {
               <h2>{producto.nombre}</h2>
               <p>Volumen: {producto.volumen}</p>
               <p>Precio: ${producto.precio}</p>
-              <Link to={`/Item/${producto.id}`} className={style.linkDetail}>
-                Ver detalle
-              </Link>
+              <Item producto={producto} />
             </div>
 
             <ItemCount stock={producto.stock} />

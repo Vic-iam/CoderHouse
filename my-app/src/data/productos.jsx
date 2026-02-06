@@ -57,3 +57,30 @@ const mangas = [
 ];
 
 export default mangas;
+
+let error = false
+
+export const getProducts = () => {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      if (error) {
+        reject('Hubo un error')
+      } else {
+        resolve(mangas)
+      }
+    }, 3000)
+  })
+}
+
+export const getOneProduct = (id)=>  {
+  return new Promise((resolve, reject) =>{
+    setTimeout(() => {
+      if(error) {
+        reject('El producto no existe')
+      } else {
+        let mang = mangas.find((man) => man.id === id)
+        resolve(mang)
+      }
+    })
+  })
+}

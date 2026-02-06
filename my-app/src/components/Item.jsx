@@ -1,10 +1,14 @@
-import React from 'react'
+import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
 
-const Item = ( {id} ) => {
+const Item = ({ producto }) => {
+
 
   return (
-    <div>  </div>
+
+    <Link to={`/Item/${producto.id}`}>Ver detalle</Link>
+
   )
 }
 
-export default Item
+export default Item;
