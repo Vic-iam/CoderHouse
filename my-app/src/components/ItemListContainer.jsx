@@ -22,6 +22,7 @@ function ItemListContainer() {
 
             <div className={style.infoManga}>
               <h2>{producto.nombre}</h2>
+              <h4> {producto.detalle} </h4>
               <p>Volumen: {producto.volumen}</p>
               <p>Precio: ${producto.precio}</p>
               <Item producto={producto} />

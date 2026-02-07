@@ -20,7 +20,7 @@ function Navbar() {
           onClick={() => setIsOpen(false)}
         >
           <Link to="/">Inicio</Link>
-          <Link to="/ItemList">Productos</Link>
+          <Link to="/Productos">Productos</Link>
           <Link to="/Contacto">Contacto</Link>
           <CartWidget />
         </div>

@@ -1,13 +1,36 @@
-import React from 'react'
+import React from "react";
+import style from "./styles/ItemDetail.module.css";
+import { GoChevronLeft } from "react-icons/go";
+import { Link } from "react-router-dom";
 
 const ItemDetail = ({ detail }) => {
   return (
-    <div>
 
-      <h1>Detalles de: {detail.name} </h1>
+    
+    <div className={style.containerItem}>
 
+
+      <div className={style.cardManga}>
+
+        
+      <div className={style.LinkStyle}>
+        <Link to="/Productos" className={style.icon}>
+          <GoChevronLeft /> Regresar
+        </Link>
+      </div>
+        <div className={style.imgStyle}>
+          <img src={detail.image} />
+        </div>
+        <h1>{detail.nombre}</h1>
+        <p>Precio: ${detail.precio}</p>
+        <p>Volumen: {detail.volumen} </p>
+      </div>
+
+      <div className={style.textInformation}>
+        <h2>{detail.detalle} </h2>
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default ItemDetail
+export default ItemDetail;
