@@ -16,6 +16,7 @@ function ItemListContainer() {
       <div className={style.containerManga}>
         {tumanga.map((producto) => (
           <div className={style.mangaCard} key={producto.id}>
+            <h4> {producto.titulo} </h4>
             <div className={style.imageManga}>
               <img src={producto.image} alt={producto.nombre} />
             </div>
