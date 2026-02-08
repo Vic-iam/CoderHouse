@@ -24,6 +24,7 @@ const ItemDetail = ({ detail }) => {
         <h1>{detail.nombre}</h1>
         <p>Precio: ${detail.precio}</p>
         <p>Volumen: {detail.volumen} </p>
+        <p>Genero: {detail.genero?.join(",")} </p>
       </div>
 
       <div className={style.textInformation}>
