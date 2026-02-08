@@ -6,7 +6,7 @@ const Item = ({ producto }) => {
 
   return (
 
-    <Link to={`/Item/${producto.id}`}>Ver detalle</Link>
+    <Link  onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })} to={`/Item/${producto.id}` }>Ver detalle</Link>
 
   )
 }

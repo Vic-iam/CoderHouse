@@ -14,7 +14,7 @@ const ItemDetail = ({ detail }) => {
 
         
       <div className={style.LinkStyle}>
-        <Link to="/Productos" className={style.icon}>
+        <Link to="/Productos" className={style.icon}  onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
           <GoChevronLeft /> Regresar
         </Link>
       </div>
