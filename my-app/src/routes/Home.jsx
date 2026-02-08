@@ -1,7 +1,10 @@
 import style from "./styles/Home.module.css";
 import fondoBanner from "../assets/image/fondoManga.png"
+import { useState } from "react";
 
 function Home() {
+
+
   return (
     <div className={style.containerHome}>
 
