@@ -4,4 +4,29 @@
     justify-content: center;
     align-items: center;
 
+    padding: 20px;
+
+}
+
+.presentationHome{
+    width: 100%;
+    height: 60vh;
+    padding-top: 100px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    
+    position: relative;
+}
+
+
+
+
+.titleHome{
+    box-shadow: 0px 0px 2px black;
+    padding: 40px 40px;
+    text-align: center;
 }

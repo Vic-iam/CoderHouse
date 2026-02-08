@@ -1,11 +1,25 @@
 .errorContainer{
-    padding: 100px 40px;
+    width: 100%;
+    height: 100vh;
 
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
+    justify-content: center;
+    gap: 60px;
 }
 
 .errorContainer h2{
-    font-size: 1.2rem;
+    font-size: 2rem;
+    color: #F4320B;
+}
+
+.lupaStyle img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.lupaStyle{
+    height: 200px;
 }

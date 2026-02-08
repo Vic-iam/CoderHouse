@@ -6,7 +6,7 @@ import tumanga from "../data/productos.jsx";
 import ItemCount from "./ItemCount.jsx";
 import Item from "./Item.jsx";
 
-function ItemListContainer() {
+function ItemListContainer({ lista }) {
   return (
     <div className={style.itemListContainer}>
       <div className={style.titleListContainer}>
@@ -25,6 +25,7 @@ function ItemListContainer() {
               <h2>{producto.nombre}</h2>
               <h4> {producto.detalle} </h4>
               <p>Volumen: {producto.volumen}</p>
+              <p>Genero: {producto.genero} </p>
               <p>Precio: ${producto.precio}</p>
               <Item producto={producto} />
             </div>

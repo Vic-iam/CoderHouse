@@ -1,5 +1,6 @@
 import React from 'react'
 import style from "./styles/Error.module.css"
+import lupa from "../assets/image/lupa.png"
 
 const Error = () => {
   return (
@@ -8,7 +9,14 @@ const Error = () => {
 
     <h2>Error....Busqueda no encontrada</h2>
 
+   <div className={style.lupaStyle}>
+
+    <img src={lupa} alt='Error' />
+
+   </div>
+
     </div>
+
   )
 }
 

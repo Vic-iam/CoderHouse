@@ -1,11 +1,21 @@
 import style from "./styles/Home.module.css";
+import fondoBanner from "../assets/image/fondoManga.png"
 
 function Home() {
   return (
     <div className={style.containerHome}>
+
       <div className={style.presentationHome}>
-        <h1>Hola</h1>
+
+        <div className={style.titleHome}>
+
+        <h1>Descubri los mejores mangas</h1>
+        <p>Explora nuevas historias, generos y autores</p>
+
+        </div>
       </div>
+
+
     </div>
   );
 }

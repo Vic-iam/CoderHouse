@@ -7,6 +7,7 @@ import Footer from "./components/Footer";
 import ItemListContainer from "./components/ItemListContainer";
 import CartWidget from "./components/CartWidget";
 import ItemDetailContainer from "./components/ItemDetailContainer";
+import Error from "./components/Error";
 
 function App() {
   return (
@@ -22,6 +23,8 @@ function App() {
 
         <Route path="/Contacto" element={<Contacto />} />
         <Route path="/Cart" element={<CartWidget />} />
+
+        <Route path="*" element={<Error />} />
 
       </Routes>
 
