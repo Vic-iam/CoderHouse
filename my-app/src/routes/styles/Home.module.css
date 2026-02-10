@@ -14,19 +14,61 @@
     padding-top: 100px;
 
     display: flex;
-    flex-direction: column;
     align-items: center;
+    justify-content: center
+
+}
+
+.borderPresentation{
+    display: flex;
     justify-content: center;
-    gap: 20px;
-    
-    position: relative;
+    align-items: center;
+
+    padding: 10px;
+
+    border: 1px solid #8C7C6D;
 }
 
 
 
-
 .titleHome{
-    box-shadow: 0px 0px 2px black;
     padding: 40px 40px;
     text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+    height: 200px;
+}
+
+.titleHome h1{
+
+    font-size: 1.4rem;
+}
+
+.titleHome p{
+    font-size: 0.9rem;
+}
+
+.imagePresentation img{
+    mask-image: linear-gradient(
+        black 90%,
+        transparent
+    );
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.imagePresentation{
+    display: flex;
+    align-items: center;
+}
+
+@media (max-width: 768px) {
+  
+    .titleHome h1{
+     font-size: 1rem;
+    }
+    
 }

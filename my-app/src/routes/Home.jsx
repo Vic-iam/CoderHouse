@@ -1,6 +1,7 @@
 import style from "./styles/Home.module.css";
 import fondoBanner from "../assets/image/fondoManga.png"
 import { useState } from "react";
+import Goku from "../assets/image/goku.png"
 
 function Home() {
 
@@ -10,12 +11,20 @@ function Home() {
 
       <div className={style.presentationHome}>
 
-        <div className={style.titleHome}>
+        <div className={style.borderPresentation}>
+          <div className={style.imagePresentation}>
 
-        <h1>Descubri los mejores mangas</h1>
-        <p>Explora nuevas historias, generos y autores</p>
+            <img src={Goku} alt="Goku" />
+          </div>
+          <div className={style.titleHome}>
+
+            <h1>Descubri los mejores mangas</h1>
+            <p>Explora nuevas historias, generos y autores</p>
+
+          </div>
 
         </div>
+
       </div>
 
 

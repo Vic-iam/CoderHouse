@@ -8,6 +8,11 @@ import CartWidget from "./CartWidget";
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
+      const handleLinkClick = () => {
+        setIsOpen(false);
+        window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+
   return (
     <header className={style.header}>
       <nav>
@@ -19,10 +24,9 @@ function Navbar() {
           className={`${style.divLinks} ${isOpen ? style.open : ""}`}
           onClick={() => setIsOpen(false)}
         >
-          <Link to="/">Inicio</Link>
-          <Link to="/Productos">Productos</Link>
-          <Link to="/Contacto">Contacto</Link>
-          <CartWidget />
+          <Link to="/" onClick={handleLinkClick}>Inicio</Link>
+          <Link to="/Productos" onClick={handleLinkClick}>Productos</Link>
+          <CartWidget  />
         </div>
 
         <div

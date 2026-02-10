@@ -30,9 +30,7 @@ function ItemListContainer() {
       </div>
 
       <div className={style.inputContainer}>
-
         <Searchlist value={search} onChange={setSearch} />
-
       </div>
 
       {filtrados.length === 0 ? (

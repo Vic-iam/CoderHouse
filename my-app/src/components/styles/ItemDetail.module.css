@@ -71,6 +71,10 @@
         height: 400px;
         width: 260px;
     }
+
+    .cardManga{
+        text-align: center;
+    }
     
     .textInformation h2{
         text-align: center;
