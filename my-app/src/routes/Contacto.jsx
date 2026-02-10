@@ -6,6 +6,7 @@ function Contacto() {
 
         <div className={style.containerContacto}>
          <h1>Contactos</h1>
+         
         </div>
     )
 }
