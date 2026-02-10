@@ -19,7 +19,7 @@ const ItemDetailContainer = () => {
   }}>Cargando...</p>
 
   return (
-    <ItemDetail detail={detail} />
+    <ItemDetail detail={detail} />  
   )
 }
 
