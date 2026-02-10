@@ -12,6 +12,7 @@
     transition: all 0.4s;
     display: flex;
     flex-direction: column;
+    gap: 10px;
     padding: 20px;
 }
 
@@ -48,7 +49,7 @@
 }
 
 .LinkStyle{
-    padding: 30px;
+    padding: 10px;
 }
 
 .icon{

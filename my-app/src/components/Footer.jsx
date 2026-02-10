@@ -2,16 +2,12 @@ import style from './styles/Footer.module.css'
 
 function Footer() {
 
-  return (
-    <footer>
+  return(
+  <footer>
 
-      <div className={style.footerContainer}>
+    <h1>Esto es el footer</h1>
 
-
-        <h1>Esto es el footer</h1>
-
-      </div>
-    </footer>
+  </footer>
 
 
   );
