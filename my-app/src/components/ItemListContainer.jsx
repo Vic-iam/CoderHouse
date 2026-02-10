@@ -1,11 +1,11 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import style from "./styles/ItemListContainer.module.css";
 import { Link } from "react-router-dom";
 
 import tumanga from "../data/productos.jsx";
 import ItemCount from "./ItemCount.jsx";
 import Item from "./Item.jsx";
-import SearchBar from "./SearchBar.jsx";
+import Searchlist from "./Searchlist.jsx";
 import FilterGenre from "./FilterGenre.jsx";
 
 function ItemListContainer() {
@@ -13,9 +13,12 @@ function ItemListContainer() {
   const [genero, setGenero] = useState("");
 
   const filtrados = tumanga.filter((m) => {
-    const matchTitulo = m.nombre.toLowerCase().includes(search.toLowerCase());
+    const matchTitulo = m.nombre
+      .toLowerCase()
+      .includes(search.toLowerCase());
 
-    const matchGenero = genero === "" || m.genero === genero;
+    const matchGenero =
+      genero === "" || m.genero.includes(genero);
 
     return matchTitulo && matchGenero;
   });
@@ -28,34 +31,43 @@ function ItemListContainer() {
 
       <div className={style.inputContainer}>
 
-      <SearchBar value={search} onchange={setSearch} />
-      <FilterGenre genero={genero} setGenero={setGenero}/>
+        <Searchlist value={search} onChange={setSearch} />
 
       </div>
 
-      <div className={style.containerManga}>
-        {tumanga.map((producto) => (
-          <div className={style.mangaCard} key={producto.id}>
-            <h4> {producto.titulo} </h4>
-            <div className={style.imageManga}>
-              <img src={producto.image} alt={producto.nombre} />
-            </div>
+      {filtrados.length === 0 ? (
+        <div className={style.errorBusqueda}>
 
-            <div className={style.infoManga}>
-              <h2>{producto.nombre}</h2>
-              <h4> {producto.detalle} </h4>
-              <div className={style.genero}></div>
-              <p>Volumen: {producto.volumen}</p>
-              <p>Precio: ${producto.precio}</p>
-              <Item producto={producto} />
-            </div>
+          <h2>No se encontraron mangas con esa búsqueda </h2>
+        </div>
 
-            <ItemCount stock={producto.stock} />
-            <h3>Stock: {producto.stock}</h3>
-          </div>
-        ))}
-      </div>
+      ) : (
+
+        <div className={style.containerManga}>
+          {filtrados.map((producto) => (
+            <div className={style.mangaCard} key={producto.id}>
+              <h4> {producto.titulo} </h4>
+              <div className={style.imageManga}>
+                <img src={producto.image} alt={producto.nombre} />
+              </div>
+
+              <div className={style.infoManga}>
+                <h2>{producto.nombre}</h2>
+                <h4> {producto.detalle} </h4>
+                <div className={style.genero}></div>
+                <p>Volumen: {producto.volumen}</p>
+                <p>Precio: ${producto.precio}</p>
+                <Item producto={producto} />
+              </div>
+
+              <ItemCount stock={producto.stock} />
+              <h3>Stock: {producto.stock}</h3>
+            </div>
+          ))}
+        </div>
+       )}
     </div>
+        
   );
 }
 

@@ -71,6 +71,15 @@
     padding: 10px;
 }
 
+.errorBusqueda h2{
+    font-size: 1.2rem;
+
+    text-align: center;
+    color: red;
+    
+    padding: 100px 40px;
+
+}
 
 @media (max-width: 768px) {
 
