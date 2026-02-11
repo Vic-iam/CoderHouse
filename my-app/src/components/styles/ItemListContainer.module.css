@@ -1,5 +1,5 @@
 
-.itemListContainer{
+.itemListContainerr{
     padding: 100px 40px;
 
     display: flex;
@@ -11,64 +11,6 @@
 .titleListContainer {
     font-size: 1rem;
     text-align: center;
-}
-
-.containerManga{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 20px;
-
-}
-
-
-.imageManga img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.imageManga{
-    width: 200px;
-    height: 300px;
-}
-
-.mangaCard{
-    background-color: #f5f5f5;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    padding: 10px;
-    transition: all 0.4s;
-}
-
-.mangaCard:hover{
-    transform: translateY(-5px);
-}
-
-.infoManga{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    gap: 5px;
-    color: #323232;
-}
-
-.infoManga h2{
-    font-size: 1.2rem;
-    margin-bottom: 10px;
-
-}
-
-.infoManga h4{
-    display: none;
-}
-
-.mangaCard h3{
-    font-size: 1rem;
-    font-weight: normal;
-    opacity: 0.8;
-    text-align: center;
-    padding: 10px;
 }
 
 .errorBusqueda h2{
@@ -85,10 +27,6 @@
 
     .titleListContainer {
         font-size: 1rem;
-    }
-
-    .mangaCard{
-        text-align: center;
     }
     
 }

@@ -1,20 +1,27 @@
-import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
-import style from "./styles/Item.module.css"
+import style from "./styles/item.module.css";
+import ItemCount from "./ItemCount";
+import ItemButtoDetail from "./ItemButtoDetail";
 
-const Item = ({ producto }) => {
-
-
+function Item({ producto }) {
   return (
+    <div className={style.mangaCard}>
 
-  
-    <div className={style.verDetalle}>
-      <Link 
-      onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })} to={`/Item/${producto.id}` }>Ver detalle</Link>
+      <div className={style.imageManga}>
+        <img src={producto.image} alt={producto.nombre} />
+      </div>
 
+      <div className={style.infoManga}>
+        <h2>{producto.nombre}</h2>
+        <h4>{producto.detalle}</h4>
+        <p>Volumen: {producto.volumen}</p>
+        <p>Precio: ${producto.precio}</p>
+        <ItemButtoDetail producto={producto} />
+      </div>
+
+      <ItemCount stock={producto.stock} />
+      <h3>Stock: {producto.stock}</h3>
     </div>
-
-  )
+  );
 }
 
 export default Item;

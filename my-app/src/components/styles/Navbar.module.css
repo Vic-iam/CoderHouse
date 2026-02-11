@@ -42,6 +42,7 @@ a {
 }
 
 .itemToggle span {
+  color: #260801;
   width: 30px;
   height: 4px;
   background-color: #323232;
@@ -49,6 +50,35 @@ a {
   border-radius: 2px;
   transition: all 0.3s ease;
 }
+
+.productosDropdown {
+    position: relative;
+    cursor: pointer;
+}
+
+.dropdownMenu {
+    position: absolute;
+    top: 28px;
+    left: 0;
+    background: white;
+    border-radius: 8px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    min-width: 160px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    z-index: 999;
+}
+
+.dropdownMenu a {
+    text-decoration: none;
+}
+
+.dropdownMenu a:hover {
+    text-decoration: underline;
+}
+
 
 @media (max-width: 768px) {
   header {

@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import style from "./styles/ItemCount.module.css";
-import { Link } from "react-router-dom";
 
 const ItemCount = ({ stock }) => {
   const [count, setCount] = useState(1);
@@ -32,7 +31,7 @@ const ItemCount = ({ stock }) => {
       <button className={style.buttonSumar} onClick={sumar}>+</button>
       </div>
       <div>
-        <Link to="/Cart" className={style.buttonComprar} onClick={() => setComprar(true)}>Comprar</Link>
+        <button className={style.buttonComprar} onClick={() => setComprar(true)}>Comprar</button>
       </div>
     </div>
   );

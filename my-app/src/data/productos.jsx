@@ -19,6 +19,7 @@ const mangas = [
     precio: 9500,
     image: dandadan1,
     genero: ["comedia", "sobrenatural" , "amor" ],
+    categoria: "mas-populares",
     stock: 6,
     detalle: "Dandadan o dan da dan es una serie de manga japonés escrita e ilustrada por Yukinobu Tatsu. Se publica en la aplicación y web Shōnen Jump+ de Shūeisha desde el 6 de abril de 2021. Shūeisha también publica sus entregas en la web y app Manga Plus en español e inglés. Una adaptación a serie anime de televisión producida por Science Saru se estrenó el 4 de octubre de 2024. ",
   },
@@ -28,6 +29,7 @@ const mangas = [
     volumen: 2,
     precio: 9500,
     image: dandadan2,
+    categoria: "mas-vendido",
     genero: ["comedia", "sobrenatural" , "amor" ],
     stock: 4,
     detalle: "Dandadan o dan da dan es una serie de manga japonés escrita e ilustrada por Yukinobu Tatsu. Se publica en la aplicación y web Shōnen Jump+ de Shūeisha desde el 6 de abril de 2021. Shūeisha también publica sus entregas en la web y app Manga Plus en español e inglés. Una adaptación a serie anime de televisión producida por Science Saru se estrenó el 4 de octubre de 2024.",
@@ -38,6 +40,7 @@ const mangas = [
     volumen: 3,
     precio: 9500,
     image: dandadan3,
+    categoria: "mas-vendido",
     genero: ["comedia", "sobrenatural" , "amor" ],
     stock: 9,
     detalle: "Dandadan o dan da dan es una serie de manga japonés escrita e ilustrada por Yukinobu Tatsu. Se publica en la aplicación y web Shōnen Jump+ de Shūeisha desde el 6 de abril de 2021. Shūeisha también publica sus entregas en la web y app Manga Plus en español e inglés. Una adaptación a serie anime de televisión producida por Science Saru se estrenó el 4 de octubre de 2024.",
@@ -48,6 +51,7 @@ const mangas = [
     volumen: 4,
     precio: 9500,
     image: dandadan4,
+    categoria: "nuevos",
     genero: ["comedia", "sobrenatural" , "amor" ],
     stock: 4,
     detalle: "Dandadan o dan da dan es una serie de manga japonés escrita e ilustrada por Yukinobu Tatsu. Se publica en la aplicación y web Shōnen Jump+ de Shūeisha desde el 6 de abril de 2021. Shūeisha también publica sus entregas en la web y app Manga Plus en español e inglés. Una adaptación a serie anime de televisión producida por Science Saru se estrenó el 4 de octubre de 2024.",
@@ -58,6 +62,7 @@ const mangas = [
     volumen: 5,
     precio: 9500,
     image: dandadan5,
+    categoria: "mas-populares",
     genero: ["comedia", "sobrenatural" , "amor" ],
     stock: 6,
     detalle: "Dandadan o dan da dan es una serie de manga japonés escrita e ilustrada por Yukinobu Tatsu. Se publica en la aplicación y web Shōnen Jump+ de Shūeisha desde el 6 de abril de 2021. Shūeisha también publica sus entregas en la web y app Manga Plus en español e inglés. Una adaptación a serie anime de televisión producida por Science Saru se estrenó el 4 de octubre de 2024.",
@@ -68,6 +73,7 @@ const mangas = [
     volumen: 6,
     precio: 9500,
     image: dandadan6,
+    categoria: "mas-populares",
     genero: ["comedia", "sobrenatural" , "amor" ],
     stock: 3,
     detalle: "Dandadan o dan da dan es una serie de manga japonés escrita e ilustrada por Yukinobu Tatsu. Se publica en la aplicación y web Shōnen Jump+ de Shūeisha desde el 6 de abril de 2021. Shūeisha también publica sus entregas en la web y app Manga Plus en español e inglés. Una adaptación a serie anime de televisión producida por Science Saru se estrenó el 4 de octubre de 2024.",
@@ -78,6 +84,7 @@ const mangas = [
     volumen: 1,
     precio: 12000,
     image: jujutsu1,
+    categoria: "mas-vendido",
     genero: ["aventura", "fantasia oscura", "sobrenatural"],
     stock: 6,
     detalle: "Jujutsu Kaisen (呪術廻戦 lit. Guerra de Hechicería?), también conocida como Jujutsu Kaisen: Guerra de hechiceros en Japón, es una serie de manga japonés escrita e ilustrada por Gege Akutami. Shūeisha publicó sus capítulos en la revista Shūkan Shōnen Jump desde el 5 de marzo de 2018 hasta el 30 de septiembre de 2024 y los ha recopilado y publicado en treinta volúmenes tankōbon a mediados de 2024. La historia gira en torno al protagonista Yūji Itadori, quien se une a una organización secreta de hechiceros para matar a una poderosa maldición llamada Ryōmen Sukuna tras convertirse en su anfitrión. Es una secuela de Tokyo Metropolitan Curse Technical School, del mismo Akutami, que Shūeisha publicó en la revista Jump GIGA entre el 28 de abril y el 28 de julio de 2017 y posteriormente recopiló en un volumen tankōbon bajo el título Jujutsu Kaisen 0, publicado el 4 de diciembre de 2018.",
@@ -88,6 +95,7 @@ const mangas = [
     volumen: 2,
     precio: 12000,
     image: jujutsu2,
+    categoria: "nuevos",
     genero: ["aventura", "fantasia oscura", "sobrenatural"],
     stock: 4,
     detalle: "Jujutsu Kaisen (呪術廻戦 lit. Guerra de Hechicería?), también conocida como Jujutsu Kaisen: Guerra de hechiceros en Japón, es una serie de manga japonés escrita e ilustrada por Gege Akutami. Shūeisha publicó sus capítulos en la revista Shūkan Shōnen Jump desde el 5 de marzo de 2018 hasta el 30 de septiembre de 2024 y los ha recopilado y publicado en treinta volúmenes tankōbon a mediados de 2024. La historia gira en torno al protagonista Yūji Itadori, quien se une a una organización secreta de hechiceros para matar a una poderosa maldición llamada Ryōmen Sukuna tras convertirse en su anfitrión. Es una secuela de Tokyo Metropolitan Curse Technical School, del mismo Akutami, que Shūeisha publicó en la revista Jump GIGA entre el 28 de abril y el 28 de julio de 2017 y posteriormente recopiló en un volumen tankōbon bajo el título Jujutsu Kaisen 0, publicado el 4 de diciembre de 2018.",
@@ -98,6 +106,7 @@ const mangas = [
     volumen: 3,
     precio: 12000,
     image: jujutsu3,
+    categoria: "mas-vendido",
     genero: ["aventura", "fantasia oscura", "sobrenatural"],
     stock: 8,
     detalle: "Jujutsu Kaisen (呪術廻戦 lit. Guerra de Hechicería?), también conocida como Jujutsu Kaisen: Guerra de hechiceros en Japón, es una serie de manga japonés escrita e ilustrada por Gege Akutami. Shūeisha publicó sus capítulos en la revista Shūkan Shōnen Jump desde el 5 de marzo de 2018 hasta el 30 de septiembre de 2024 y los ha recopilado y publicado en treinta volúmenes tankōbon a mediados de 2024. La historia gira en torno al protagonista Yūji Itadori, quien se une a una organización secreta de hechiceros para matar a una poderosa maldición llamada Ryōmen Sukuna tras convertirse en su anfitrión. Es una secuela de Tokyo Metropolitan Curse Technical School, del mismo Akutami, que Shūeisha publicó en la revista Jump GIGA entre el 28 de abril y el 28 de julio de 2017 y posteriormente recopiló en un volumen tankōbon bajo el título Jujutsu Kaisen 0, publicado el 4 de diciembre de 2018.",
@@ -108,6 +117,7 @@ const mangas = [
     volumen: 4,
     precio: 12000,
     image: jujutsu4,
+    categoria: "mas-vendido",
     genero: ["aventura", "fantasia oscura", "sobrenatural"],
     stock: 6,
     detalle: "Jujutsu Kaisen (呪術廻戦 lit. Guerra de Hechicería?), también conocida como Jujutsu Kaisen: Guerra de hechiceros en Japón, es una serie de manga japonés escrita e ilustrada por Gege Akutami. Shūeisha publicó sus capítulos en la revista Shūkan Shōnen Jump desde el 5 de marzo de 2018 hasta el 30 de septiembre de 2024 y los ha recopilado y publicado en treinta volúmenes tankōbon a mediados de 2024. La historia gira en torno al protagonista Yūji Itadori, quien se une a una organización secreta de hechiceros para matar a una poderosa maldición llamada Ryōmen Sukuna tras convertirse en su anfitrión. Es una secuela de Tokyo Metropolitan Curse Technical School, del mismo Akutami, que Shūeisha publicó en la revista Jump GIGA entre el 28 de abril y el 28 de julio de 2017 y posteriormente recopiló en un volumen tankōbon bajo el título Jujutsu Kaisen 0, publicado el 4 de diciembre de 2018.",
@@ -118,6 +128,7 @@ const mangas = [
     volumen: 5,
     precio: 12000,
     image: jujutsu5,
+    categoria: "mas-vendido",
     genero: ["aventura", "fantasia oscura", "sobrenatural"],
     stock: 4,
     detalle: "Jujutsu Kaisen (呪術廻戦 lit. Guerra de Hechicería?), también conocida como Jujutsu Kaisen: Guerra de hechiceros en Japón, es una serie de manga japonés escrita e ilustrada por Gege Akutami. Shūeisha publicó sus capítulos en la revista Shūkan Shōnen Jump desde el 5 de marzo de 2018 hasta el 30 de septiembre de 2024 y los ha recopilado y publicado en treinta volúmenes tankōbon a mediados de 2024. La historia gira en torno al protagonista Yūji Itadori, quien se une a una organización secreta de hechiceros para matar a una poderosa maldición llamada Ryōmen Sukuna tras convertirse en su anfitrión. Es una secuela de Tokyo Metropolitan Curse Technical School, del mismo Akutami, que Shūeisha publicó en la revista Jump GIGA entre el 28 de abril y el 28 de julio de 2017 y posteriormente recopiló en un volumen tankōbon bajo el título Jujutsu Kaisen 0, publicado el 4 de diciembre de 2018.",
@@ -128,6 +139,7 @@ const mangas = [
     volumen: 6,
     precio: 12000,
     image: jujutsu6,
+    categoria: "mas-vendido",
     genero: ["aventura", "fantasia oscura", "sobrenatural"],
     stock: 2,
     detalle: "Jujutsu Kaisen (呪術廻戦 lit. Guerra de Hechicería?), también conocida como Jujutsu Kaisen: Guerra de hechiceros en Japón, es una serie de manga japonés escrita e ilustrada por Gege Akutami. Shūeisha publicó sus capítulos en la revista Shūkan Shōnen Jump desde el 5 de marzo de 2018 hasta el 30 de septiembre de 2024 y los ha recopilado y publicado en treinta volúmenes tankōbon a mediados de 2024. La historia gira en torno al protagonista Yūji Itadori, quien se une a una organización secreta de hechiceros para matar a una poderosa maldición llamada Ryōmen Sukuna tras convertirse en su anfitrión. Es una secuela de Tokyo Metropolitan Curse Technical School, del mismo Akutami, que Shūeisha publicó en la revista Jump GIGA entre el 28 de abril y el 28 de julio de 2017 y posteriormente recopiló en un volumen tankōbon bajo el título Jujutsu Kaisen 0, publicado el 4 de diciembre de 2018.",
@@ -146,7 +158,7 @@ export const getProducts = () => {
       } else {
         resolve(mangas);
       }
-    }, 3000);
+    }, 500);
   });
 };
 
@@ -160,6 +172,18 @@ export const getOneProduct = (id) => {
       } else {
         reject("El producto no existe");
       }
-    }, 1);
+    }, 500);
+  });
+};
+
+export const getProductsByCategory = (type) => {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      const filtered = mangas.filter(
+        m => m.categoria.toLowerCase() === type.toLowerCase()
+      );
+
+      resolve(filtered);
+    }, 500);
   });
 };
