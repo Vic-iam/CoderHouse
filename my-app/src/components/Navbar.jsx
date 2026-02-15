@@ -33,7 +33,7 @@ function Navbar() {
             className={style.productosDropdown}
             onClick={() => setShowCat(!showCat)}
           >
-            <span style={{display: "flex", gap:"5px"}}>Productos <FaChevronDown /></span>
+            <h2 style={{display: "flex", gap:"5px"}}>Productos <FaChevronDown /></h2>
 
             {showCat && (
               <div className={style.dropdownMenu}>

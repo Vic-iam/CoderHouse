@@ -42,7 +42,6 @@ a {
 }
 
 .itemToggle span {
-  color: #260801;
   width: 30px;
   height: 4px;
   background-color: #323232;
@@ -54,6 +53,12 @@ a {
 .productosDropdown {
     position: relative;
     cursor: pointer;
+}
+
+.productosDropdown h2{
+  font-size: 1.1rem;
+  color: #260801;
+  font-weight: 500;
 }
 
 .dropdownMenu {
@@ -70,6 +75,8 @@ a {
     box-shadow: 0 4px 10px rgba(0,0,0,0.15);
     z-index: 999;
 }
+
+
 
 .dropdownMenu a {
     text-decoration: none;
