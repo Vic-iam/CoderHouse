@@ -1,9 +1,8 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import style from "./styles/ItemCount.module.css";
 
-const ItemCount = ({ stock }) => {
+const ItemCount = ({ stock, onAdd }) => {
   const [count, setCount] = useState(1);
-  const [comprar, setComprar] = useState(false);
 
    const sumar = () => {
     if (count < stock) {
@@ -17,9 +16,13 @@ const ItemCount = ({ stock }) => {
         }
     }
 
-    useEffect(() => {
 
-    }, [comprar]);
+    console.log("onAdd:", onAdd)
+
+
+  const purchase = () => {
+     onAdd(count)
+  } 
 
   return (
     <div className={style.containerItemCount}>
@@ -31,7 +34,7 @@ const ItemCount = ({ stock }) => {
       <button className={style.buttonSumar} onClick={sumar}>+</button>
       </div>
       <div>
-        <button className={style.buttonComprar} onClick={() => setComprar(true)}>Comprar</button>
+        <button className={style.buttonComprar} onClick={purchase}>Comprar</button>
       </div>
     </div>
   );

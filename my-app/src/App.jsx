@@ -11,12 +11,12 @@ import ItemDetailContainer from "./components/ItemDetailContainer";
 import CartWidget from "./components/CartWidget";
 import Error from "./components/Error";
 
-import { cardProvider } from "./context/CartContext";
+import { CardProvider } from "./context/CartContext";
 
 function App() {
   return (
     <>
-      <cardProvider>
+      <CardProvider>
         <Navbar />
 
         <Routes>
@@ -34,7 +34,7 @@ function App() {
         </Routes>
 
         <Footer />
-      </cardProvider>
+      </CardProvider>
     </>
   );
 }

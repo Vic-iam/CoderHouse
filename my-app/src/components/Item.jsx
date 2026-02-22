@@ -2,7 +2,7 @@ import style from "./styles/item.module.css";
 import ItemCount from "./ItemCount";
 import ItemButtoDetail from "./ItemButtoDetail";
 
-function Item({ producto }) {
+function Item({ producto, onAdd }) {
   return (
     <div className={style.mangaCard}>
 
@@ -18,7 +18,7 @@ function Item({ producto }) {
         <ItemButtoDetail producto={producto} />
       </div>
 
-      <ItemCount stock={producto.stock} />
+      <ItemCount stock={producto.stock} onAdd={onAdd}/>
       <h3>Stock: {producto.stock}</h3>
     </div>
   );

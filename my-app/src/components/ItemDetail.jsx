@@ -1,10 +1,22 @@
-import React from "react";
+import React, { useContext } from "react";
 import style from "./styles/ItemDetail.module.css";
 import { GoChevronLeft } from "react-icons/go";
 import { Link } from "react-router-dom";
 import ItemCount from "./ItemCount";
+import { CardContext } from "../context/CartContext";
 
 const ItemDetail = ({ detail }) => {
+  const {cart , addItem } = useContext(CardContext);
+
+  console.log(context);
+
+  const onAdd = (cantidad) => {
+    console.log(`Agregaste del ${detail.nombre}, ${cantidad} unidades `);
+    addItem(detail, cantidad);
+  };
+
+  if (!detail) return <p>Cargando...</p>;
+
   return (
     <div className={style.containerItem}>
       <div className={style.cardManga}>
@@ -24,8 +36,10 @@ const ItemDetail = ({ detail }) => {
         <p>Precio: ${detail.precio}</p>
         <p>Volumen: {detail.volumen} </p>
         <p>Genero: {detail.genero?.join(",")} </p>
-        <ItemCount  stock={detail.stock}/>
-        <p style={{textAlign: "center", opacity: "0.8"}}>Stock: {detail.stock} </p>
+        <ItemCount stock={detail.stock} onAdd={onAdd} />
+        <p style={{ textAlign: "center", opacity: "0.8" }}>
+          Stock: {detail.stock}{" "}
+        </p>
       </div>
 
       <div className={style.textInformation}>
