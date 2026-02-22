@@ -5,32 +5,36 @@ import Navbar from "./components/Navbar";
 import Home from "./routes/Home";
 import Footer from "./components/Footer";
 
-import ItemListContainer from "./components/ItemListContainer"; 
+import ItemListContainer from "./components/ItemListContainer";
 import ItemDetailContainer from "./components/ItemDetailContainer";
 
 import CartWidget from "./components/CartWidget";
 import Error from "./components/Error";
 
+import { cardProvider } from "./context/CartContext";
+
 function App() {
   return (
     <>
-      <Navbar />
+      <cardProvider>
+        <Navbar />
 
-      <Routes>
-        <Route path="/" element={<Home />} />
+        <Routes>
+          <Route path="/" element={<Home />} />
 
-        <Route path="/Productos" element={<ItemListContainer />} />
+          <Route path="/Productos" element={<ItemListContainer />} />
 
-        <Route path="/Item/:id" element={<ItemDetailContainer />} />
+          <Route path="/Item/:id" element={<ItemDetailContainer />} />
 
-        <Route path="/categoria/:type" element={<ItemListContainer />} />
+          <Route path="/categoria/:type" element={<ItemListContainer />} />
 
-        <Route path="/Cart" element={<CartWidget />} />
+          <Route path="/Cart" element={<CartWidget />} />
 
-        <Route path="*" element={<Error />} />
-      </Routes>
+          <Route path="*" element={<Error />} />
+        </Routes>
 
-      <Footer />
+        <Footer />
+      </cardProvider>
     </>
   );
 }
