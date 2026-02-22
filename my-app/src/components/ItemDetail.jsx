@@ -8,14 +8,13 @@ import { CardContext } from "../context/CartContext";
 const ItemDetail = ({ detail }) => {
   const {cart , addItem } = useContext(CardContext);
 
-  console.log(context);
+  console.log(addItem);
 
   const onAdd = (cantidad) => {
     console.log(`Agregaste del ${detail.nombre}, ${cantidad} unidades `);
     addItem(detail, cantidad);
   };
 
-  if (!detail) return <p>Cargando...</p>;
 
   return (
     <div className={style.containerItem}>
