@@ -3,6 +3,7 @@ import { getProducts, getProductsByCategory } from "../data/productos";
 import style from "./styles/ItemListContainer.module.css";
 import ItemList from "./ItemList";
 import { useParams } from "react-router-dom";
+import Loading from "./Loading";
 
 function ItemListContainer() {
  
@@ -26,17 +27,22 @@ function ItemListContainer() {
   }, [type]);
 
 
-  if (loading) {
-    return <p style={{ padding: "120px 40px", textAlign: "center", fontSize: "1.5rem"}}>Cargando...</p>;
-  }
-
   return (
     <div className={style.itemListContainerr}>
       <div className={style.titleListContainer}>
         <h1>Lista de productos</h1>
       </div>
 
-      <ItemList productos={tumanga} />
+     {
+      loading 
+      ? <Loading text={type ? "Cargando categoria..." : "Cargando productos..."}/> 
+      : 
+
+         <ItemList productos={tumanga} />
+
+    
+     }
+      
     </div>
   );
 }

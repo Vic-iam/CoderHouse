@@ -1,6 +1,4 @@
 import style from "./styles/Home.module.css";
-import fondoBanner from "../assets/image/fondoManga.png"
-import { useState } from "react";
 import Goku from "../assets/image/goku.png"
 
 function Home() {
@@ -24,6 +22,13 @@ function Home() {
           </div>
 
         </div>
+
+      </div>
+
+
+      <div>
+
+
 
       </div>
 

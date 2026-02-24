@@ -2,10 +2,16 @@ import style from "./styles/item.module.css";
 import ItemCount from "./ItemCount";
 import ItemButtoDetail from "./ItemButtoDetail";
 
-function Item({ producto, onAdd }) {
+function Item({ producto }) {
+
+
+  const onAdd = (cantidad) => {
+    console.log(`Agregaste del ${detail.nombre}, ${cantidad} unidades `);
+    addItem(detail, cantidad);
+  };
+
   return (
     <div className={style.mangaCard}>
-
       <div className={style.imageManga}>
         <img src={producto.image} alt={producto.nombre} />
       </div>
@@ -18,7 +24,7 @@ function Item({ producto, onAdd }) {
         <ItemButtoDetail producto={producto} />
       </div>
 
-      <ItemCount stock={producto.stock} onAdd={onAdd}/>
+      <ItemCount stock={producto.stock} onAdd={onAdd} />
       <h3>Stock: {producto.stock}</h3>
     </div>
   );

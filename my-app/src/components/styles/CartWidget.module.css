@@ -1,20 +1,14 @@
-.cartWidget h1{
-
-    font-size: 1.4rem;
-    text-align: center;
-
-    color: #323232;
-
-}
-
 .cartLink{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    position: relative;
 }
-
-
-.cartLink a{
-    display: flex;
-    gap: 2px;
+.cartBadge {
+  position: absolute;
+  top: -6px;
+  right: -10px;
+  background: red;
+  color: white;
+  border-radius: 50%;
+  padding: 2px 6px;
+  font-size: 12px;
+  font-weight: bold;
 }
