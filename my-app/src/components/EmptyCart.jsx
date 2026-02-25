@@ -1,7 +1,15 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
-export const EmptyCart = () => {
+const EmptyCart = () => {
   return (
-    <div>EmptyCart</div>
+    <div style={{padding: "120px 100px", display: "flex", flexDirection: "column",  justifyContent: "center", alignItems: "center"}}>
+
+      <h1>Tu carro esta vacio</h1>
+      <Link to="/Productos">Compra aca </Link>
+
+    </div>
   )
 }
+
+export default EmptyCart

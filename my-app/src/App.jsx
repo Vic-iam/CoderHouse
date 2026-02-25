@@ -13,6 +13,7 @@ import Error from "./components/Error";
 
 import { CardProvider } from "./context/CartContext";
 import CartContainer from "./components/CartContainer";
+import CartView from "./components/CartView";
 
 function App() {
   return (
@@ -30,6 +31,8 @@ function App() {
           <Route path="/categoria/:type" element={<ItemListContainer />} />
 
           <Route path="/cart" element={<CartContainer />} />
+
+          <Route path="/cartView" element={<CartView />} />
 
           <Route path="/cartWidget" element={<CartWidget />} />
 
