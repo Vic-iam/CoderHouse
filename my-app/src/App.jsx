@@ -2,7 +2,7 @@ import "./App.css";
 import { Routes, Route } from "react-router-dom";
 
 import Navbar from "./components/Navbar";
-import Home from "./routes/Home";
+import Home from "./routes/HomeList";
 import Footer from "./components/Footer";
 
 import ItemListContainer from "./components/ItemListContainer";
@@ -29,9 +29,9 @@ function App() {
 
           <Route path="/categoria/:type" element={<ItemListContainer />} />
 
-          <Route path="/cart" element={<CartContainer />}
+          <Route path="/cart" element={<CartContainer />} />
 
-          <Route path="/Cart" element={<CartWidget />} />
+          <Route path="/cartWidget" element={<CartWidget />} />
 
           <Route path="*" element={<Error />} />
         </Routes>

@@ -1,6 +1,6 @@
 header {
   background-color: #8C7C6D;
-  height: 80px;
+  height: 100px;
   width: 100%;
   padding: 20px;
 
@@ -18,10 +18,14 @@ nav {
   height: 100%;
 }
 
-.divLogo {
-  font-size: 1rem;
-  font-weight: bold;
-  color: #260801;
+.divLogo img{
+  height: 100%;
+  width: 100%;
+  }
+
+.divLogo{
+  height: 80px;
+  width: 80px;
 }
 
 .divLinks {

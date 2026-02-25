@@ -5,13 +5,15 @@ import { useState } from "react";
 import CartWidget from "./CartWidget";
 import { FaChevronDown } from "react-icons/fa6";
 
+import logo from "../assets/image/logo.png"
+
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [showCat, setShowCat] = useState(false);
 
-  const handleLinkClick = () => {
+  const handleLinkClick = () => { 
     setIsOpen(false);
-    setShowCat(false);
+    setShowCat(false); 
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
@@ -19,7 +21,7 @@ function Navbar() {
     <header className={style.header}>
       <nav>
         <div className={style.divLogo}>
-          <h1>tuManga</h1>
+         <Link to="/"> <img src={logo} alt={"logo"} />  </Link> 
         </div>
         <div className={`${style.divLinks} ${isOpen ? style.open : ""}`}>
           <Link to="/" onClick={handleLinkClick}>

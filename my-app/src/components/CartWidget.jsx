@@ -7,7 +7,7 @@ function CartWidget() {
   return (
     <div className={style.cartWidget}>
       <div className={style.cartLink}>
-        <Link to="/Cart">
+        <Link to="/cartWidget">
           <CiShoppingCart />Carrito<span>{10}</span>
         </Link>
       </div>
