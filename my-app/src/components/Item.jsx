@@ -1,13 +1,18 @@
 import style from "./styles/item.module.css";
 import ItemCount from "./ItemCount";
 import ItemButtoDetail from "./ItemButtoDetail";
+import { Link } from "react-router-dom";
+import { CardContext } from "../context/CartContext";
+import { useContext, useState } from "react";
 
 function Item({ producto }) {
-
+  const { addItem } = useContext(CardContext);
+  const [purchase, setPurchase] = useState(false);
 
   const onAdd = (cantidad) => {
-    console.log(`Agregaste del ${detail.nombre}, ${cantidad} unidades `);
-    addItem(detail, cantidad);
+    console.log(`Agregaste del ${producto.nombre}, ${cantidad} unidades `);
+    addItem(producto, cantidad);
+    setPurchase(true);
   };
 
   return (
@@ -24,7 +29,22 @@ function Item({ producto }) {
         <ItemButtoDetail producto={producto} />
       </div>
 
-      <ItemCount stock={producto.stock} onAdd={onAdd} />
+      {purchase ? (
+        <Link
+          to="/cart"
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            width: "100%",
+            border: "1px solid",
+            padding: "5px",
+          }}
+        >
+          Ir al carrito
+        </Link>
+      ) : (
+        <ItemCount stock={producto.stock} onAdd={onAdd} />
+      )}
       <h3>Stock: {producto.stock}</h3>
     </div>
   );
