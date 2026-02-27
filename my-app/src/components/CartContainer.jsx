@@ -1,22 +1,33 @@
-import React, { useContext } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import { CardContext } from '../context/CartContext'
 import CartView from './CartView'
 import EmptyCart from './EmptyCart'
+import Loading from './Loading'
 
 const CartContainer = () => {
 
-  const {cart} = useContext(CardContext)
+  const { cart } = useContext(CardContext)
+  const [isLoading, setIsLoading] = useState(true)
+
+  useEffect(() => {
+    setTimeout(() => {
+      setIsLoading(false)
+    }, 500);
+  })
 
   return (
 
     <>
-    
-     {
-      cart.lenght 
-      ? <CartView />
-      : <EmptyCart />
-     }
-    
+
+      {isLoading
+        ?
+        <Loading text={"Cargando datos..."} />
+        :
+        cart.lenght
+        ? <CartView />
+        : <EmptyCart />
+      }
+
     </>
 
 

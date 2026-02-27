@@ -30,8 +30,9 @@ nav {
 
 .divLinks {
   display: flex;
-  gap: 10px;
+  gap: 20px;
   font-size: 1.1rem;
+  align-items: center;
 }
 
 a {
@@ -58,6 +59,7 @@ a {
     position: relative;
     cursor: pointer;
 }
+
 
 .productosDropdown h2{
   font-size: 1.1rem;
@@ -93,51 +95,48 @@ a {
 }
 
 
+.backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.4);
+  z-index: 998;
+}
+
 @media (max-width: 768px) {
-  header {
-    height: auto;
-    padding: 20px;
-  }
 
   .divLinks {
     position: fixed;
     top: 0;
     right: 0;
     background-color: #F2DAC4;
-    opacity: 0.9;
     height: 100vh;
-    width: 100%;
-    display: flex;
+    width: 70%;
     flex-direction: column;
-    justify-content:  center;
+    justify-content: center;
     align-items: center;
-    gap: 50px;
-    transform: translateX(-100%);
+    gap: 40px;
+    transform: translateX(100%);
     transition: transform 0.4s ease;
     z-index: 999;
-    border: 1px solid white;
   }
-
 
   .divLinks.open {
     transform: translateX(0);
   }
 
   .itemToggle {
-    display: flex;
-    flex-direction: column;
+    display: block;
+    font-size: 28px;
+    background: none;
+    border: none;
+    cursor: pointer;
     z-index: 1000;
   }
 
-  .open span:nth-child(1) {
-    transform: rotate(45deg) translate(5px, 5px);
-  }
-
-  .open span:nth-child(2) {
-    opacity: 0;
-  }
-
-  .open span:nth-child(3) {
-    transform: rotate(-45deg) translate(5px, -5px);
+  .dropdownMenu {
+    position: static;
+    box-shadow: none;
+    background: transparent;
+    align-items: center;
   }
 }

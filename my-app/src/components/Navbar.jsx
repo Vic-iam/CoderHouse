@@ -1,64 +1,91 @@
-"use client";
 import style from "./styles/Navbar.module.css";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { useRef, useState, useEffect } from "react";
 import CartWidget from "./CartWidget";
-import { FaChevronDown } from "react-icons/fa6";
-import { FaUser, FaBars, FaTimes } from "react-icons/fa";
-
-import logo from "../assets/image/logo.png"
+import { FaChevronDown, FaUser, FaBars, FaTimes } from "react-icons/fa";
+import logo from "../assets/image/logo.png";
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [showCat, setShowCat] = useState(false);
-  const menuRef = useRef(null)
+  const menuRef = useRef(null);
 
-    useEffect(() => {
+  // Bloquear scroll cuando menú está abierto
+  useEffect(() => {
     document.body.style.overflow = isOpen ? "hidden" : "auto";
     return () => (document.body.style.overflow = "auto");
   }, [isOpen]);
 
-  
+  // Cerrar menú si clic fuera
+  useEffect(() => {
+    const handler = (e) => {
+      if (menuRef.current && !menuRef.current.contains(e.target)) {
+        setIsOpen(false);
+        setShowCat(false);
+      }
+    };
 
-  const handleLinkClick = () => { 
+    if (isOpen) document.addEventListener("mousedown", handler);
+    return () => document.removeEventListener("mousedown", handler);
+  }, [isOpen]);
+
+
+  const handleLinkClick = () => {
     setIsOpen(false);
-    setShowCat(false); 
+    setShowCat(false);
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   return (
     <header className={style.header}>
-      <nav>
+      <nav className={style.nav}>
         <div className={style.divLogo}>
-         <Link to="/"> <img src={logo} alt={"logo"} />  </Link> 
-        </div>
-        <div className={`${style.divLinks} ${isOpen ? style.open : ""}`}>
-          <Link to="/" onClick={handleLinkClick}>
-            Inicio
+          <Link to="/">
+            <img src={logo} alt="logo" />
           </Link>
+        </div>
+
+        {isOpen && (
           <div
-            className={style.productosDropdown}
-            onClick={() => setShowCat(!showCat)}>
-            <h2 style={{ display: "flex", gap: "5px" }}>
+            className={style.backdrop}
+            onClick={() => setIsOpen(false)}
+          />
+        )}
+
+        <div
+          ref={menuRef}
+          className={`${style.divLinks} ${isOpen ? style.open : ""}`}
+        >
+          <NavLink to="/"  onClick={handleLinkClick}>
+            Inicio
+          </NavLink>
+
+          <div className={style.productosDropdown}>
+            <div
+              className={style.dropdownTitle}
+              onClick={() => setShowCat(!showCat)}
+            >
               Productos <FaChevronDown />
-            </h2>
+            </div>
+
             {showCat && (
               <div className={style.dropdownMenu}>
-                <Link to="/Productos" onClick={handleLinkClick}>
+                <NavLink to="/Productos" onClick={handleLinkClick}>
                   Ver todos
-                </Link>
-                <Link to="/categoria/mas-populares" onClick={handleLinkClick}>
+                </NavLink>
+                <NavLink to="/categoria/mas-populares" onClick={handleLinkClick}>
                   Más populares
-                </Link>
-                <Link to="/categoria/mas-vendido" onClick={handleLinkClick}>
+                </NavLink>
+                <NavLink to="/categoria/mas-vendido" onClick={handleLinkClick}>
                   Más vendidos
-                </Link>
-                <Link to="/categoria/nuevos" onClick={handleLinkClick}>
+                </NavLink>
+                <NavLink to="/categoria/nuevos" onClick={handleLinkClick}>
                   Nuevos
-                </Link>
+                </NavLink>
               </div>
             )}
           </div>
+
           <CartWidget />
         </div>
 

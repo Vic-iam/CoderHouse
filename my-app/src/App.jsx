@@ -2,7 +2,6 @@ import "./App.css";
 import { Routes, Route } from "react-router-dom";
 
 import Navbar from "./components/Navbar";
-import Home from "./routes/HomeList";
 import Footer from "./components/Footer";
 
 import ItemListContainer from "./components/ItemListContainer";
@@ -14,6 +13,7 @@ import Error from "./components/Error";
 import { CardProvider } from "./context/CartContext";
 import CartContainer from "./components/CartContainer";
 import CartView from "./components/CartView";
+import HomeListContainer from "./routes/HomeList.Container";
 
 function App() {
   return (
@@ -22,7 +22,7 @@ function App() {
         <Navbar />
 
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<HomeListContainer />} />
 
           <Route path="/Productos" element={<ItemListContainer />} />
 

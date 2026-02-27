@@ -6,7 +6,7 @@ const Loading = ({ text }) => {
 
 
   return (
-    <div style={{display: "flex", justifyContent: "center", alignItems: "center",flexDirection: "column", width: "100%", height: "85vh", gap: "20px"}}> 
+    <div style={{display: "flex", justifyContent: "center", alignItems: "center",flexDirection: "column", width: "100%", height: "95vh", gap: "20px"}}> 
     
     <BeatLoader size={15} margin={2} />
 
