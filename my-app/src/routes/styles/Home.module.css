@@ -3,6 +3,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    min-height: 96vh;
 
     padding: 20px;
 
@@ -29,25 +30,28 @@
     border: 1px solid #8C7C6D;
 }
 
-
-
 .titleHome{
     padding: 40px 40px;
     text-align: center;
     display: flex;
     justify-content: center;
     flex-direction: column;
+    gap: 10px;
 
-    height: 200px;
 }
 
 .titleHome h1{
-
     font-size: 1.4rem;
 }
 
 .titleHome p{
     font-size: 0.9rem;
+}
+
+.titleHome a{
+    font-size: 1.2rem;
+    text-align: center;
+    text-decoration: underline;
 }
 
 .imagePresentation img{

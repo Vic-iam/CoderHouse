@@ -1,0 +1,39 @@
+.EmptyCartContainer{
+    padding: 140px 100px;
+    height: 95vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.titleEmpty h1{
+    font-size: 1.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    text-align: center;
+    gap: 5px;
+}
+
+.EmptyCartContainer a{
+    border: 1px black solid;
+    padding: 10px;
+    border-radius: 20px;
+    font-size: 1.4rem;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    
+.titleEmpty h1{
+    font-size: 1.1rem;
+}
+
+.EmptyCartContainer a{
+    font-size: 0.8rem;
+}
+    
+}

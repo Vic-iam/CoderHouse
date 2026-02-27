@@ -1,12 +1,17 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import style from "./styles/EmptyCart.module.css"
+import { HiEmojiSad } from "react-icons/hi";
 
 const EmptyCart = () => {
   return (
-    <div style={{padding: "120px 100px", display: "flex", flexDirection: "column",  justifyContent: "center", alignItems: "center"}}>
+    <div className={style.EmptyCartContainer}>
+    
+    <div className={style.titleEmpty}>
+      <h1>...Ohh parece que no has elegido ningun manga<HiEmojiSad /></h1>
+    </div>
 
-      <h1>Tu carro esta vacio</h1>
-      <Link to="/Productos">Compra aca </Link>
+      <Link to="/Productos">Compra tu manga favorito aca</Link>
 
     </div>
   )

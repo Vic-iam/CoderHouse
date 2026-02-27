@@ -1,15 +1,24 @@
 "use client";
 import style from "./styles/Navbar.module.css";
 import { Link } from "react-router-dom";
-import { useState } from "react";
+import { useRef, useState, useEffect } from "react";
 import CartWidget from "./CartWidget";
 import { FaChevronDown } from "react-icons/fa6";
+import { FaUser, FaBars, FaTimes } from "react-icons/fa";
 
 import logo from "../assets/image/logo.png"
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [showCat, setShowCat] = useState(false);
+  const menuRef = useRef(null)
+
+    useEffect(() => {
+    document.body.style.overflow = isOpen ? "hidden" : "auto";
+    return () => (document.body.style.overflow = "auto");
+  }, [isOpen]);
+
+  
 
   const handleLinkClick = () => { 
     setIsOpen(false);
@@ -53,13 +62,12 @@ function Navbar() {
           <CartWidget />
         </div>
 
-        <div
-          className={`${style.itemToggle} ${isOpen ? style.open : ""}`}
-          onClick={() => setIsOpen(!isOpen)}>
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
+        <button
+          className={style.itemToggle}
+          onClick={() => setIsOpen(!isOpen)}
+        >
+          {isOpen ? <FaTimes /> : <FaBars />}
+        </button>
       </nav>
     </header>
   );

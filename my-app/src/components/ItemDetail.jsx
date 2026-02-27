@@ -6,17 +6,13 @@ import ItemCount from "./ItemCount";
 import { CardContext } from "../context/CartContext";
 
 const ItemDetail = ({ detail }) => {
-  const {addItem } = useContext(CardContext);
-  const [purchase, setPurchase] = useState(false)
+  const { addItem } = useContext(CardContext);
+  const [purchase, setPurchase] = useState(false);
 
-
- 
   const onAdd = (cantidad) => {
-    console.log(`Agregaste del ${detail.nombre}, ${cantidad} unidades `);
     addItem(detail, cantidad);
-    setPurchase(true)
+    setPurchase(true);
   };
-
 
   return (
     <div className={style.containerItem}>
@@ -37,7 +33,22 @@ const ItemDetail = ({ detail }) => {
         <p>Precio: ${detail.precio}</p>
         <p>Volumen: {detail.volumen} </p>
         <p>Genero: {detail.genero?.join(",")} </p>
-        {purchase ? <Link to="/cart" style={{display: "flex", justifyContent: "center", width: "100%", border: "1px solid", padding: "5px" }}>Ir al carrito</Link> : <ItemCount stock={detail.stock} onAdd={onAdd} />}
+        {purchase ? (
+          <Link
+            to="/cartView"
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              width: "100%",
+              border: "1px solid",
+              padding: "5px",
+            }}
+          >
+            Ir al carrito
+          </Link>
+        ) : (
+          <ItemCount stock={detail.stock} onAdd={onAdd} />
+        )}
         <p style={{ textAlign: "center", opacity: "0.8" }}>
           Stock: {detail.stock}
         </p>

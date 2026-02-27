@@ -1,41 +1,41 @@
-import React, { useContext } from 'react'
-import { CardContext } from '../context/CartContext'
+import React, { useContext } from "react";
+import { CardContext } from "../context/CartContext";
+import style from "./styles/CartView.module.css";
+import { GoX } from "react-icons/go";
 
 const CartView = () => {
-
-  const {cart, removeItem} = useContext(CardContext)
+  const { cart, removeItem } = useContext(CardContext);
 
   return (
-    <div style={{padding: "120px 100px", display: "flex", flexDirection: "column",  justifyContent: "center", alignItems: "center"}}>
+    <div className={style.CartViewContainer}>
       <h1>Lista de compras</h1>
 
-      <div>
-        
-        {
+      <div className={style.cartCard}>
+        {cart.map((compra) => (
+          <div key={compra.id} className={style.cartIndex}>
+            <div className={style.cartInformation}>
+              <img
+                src={compra.image}
+                alt={compra.nombre}
+                className={style.CartViewImg}
+              />
+              <h2> {compra.nombre} </h2>
+              <p>Precio: {compra.precio} </p>
+              <p>Stock: {compra.stock} </p>
+              <p>Precio final: ${compra.precio * compra.stock},00 </p>
+              </div>
 
-           cart.map((compra) => {
-            <div key={compra.id} >
-
-
-              <img src={compra.image} alt={compra.nombre} style={{width: "10rem"}}/>
-              <p> {compra.nombre} </p>
-              <p> {compra.precio} </p>
-              <p> {compra.stock} </p>
-              <p> precio final :%{compra.precio*compra.stock},00  </p>
-              <button onClick={() => removeItem(compra.id)}>X</button>
-          
-
-            </div>
-           })
-
-
-        }
-
-
+              <button
+                onClick={() => removeItem(compra.id)}
+                className={style.cartBtn}
+              >
+                <GoX />
+              </button>
+          </div>
+        ))}
       </div>
-
     </div>
-  )
-}
+  );
+};
 
-export default CartView
+export default CartView;

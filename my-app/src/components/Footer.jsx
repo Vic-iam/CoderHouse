@@ -4,8 +4,10 @@ function Footer() {
 
   return(
   <footer>
-
-    <h1>Esto es el footer</h1>
+   
+   <div className={style.copy}>
+    <h1> © 2025 TuManga. Todos los derechos reservados a <a href='https://github.com/Vic-iam/CoderHouse'>Vic-iam</a> </h1>
+   </div>
 
   </footer>
 

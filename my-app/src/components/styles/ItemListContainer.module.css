@@ -1,7 +1,6 @@
 
 .itemListContainerr{
-    padding: 120px 40px;
-
+    padding: 140px 40px;
     display: flex;
     flex-direction: column;
     gap: 20px;

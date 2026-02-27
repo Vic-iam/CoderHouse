@@ -10,7 +10,6 @@ function Item({ producto }) {
   const [purchase, setPurchase] = useState(false);
 
   const onAdd = (cantidad) => {
-    console.log(`Agregaste del ${producto.nombre}, ${cantidad} unidades `);
     addItem(producto, cantidad);
     setPurchase(true);
   };
@@ -31,7 +30,7 @@ function Item({ producto }) {
 
       {purchase ? (
         <Link
-          to="/cart"
+          to="/cartView"
           style={{
             display: "flex",
             justifyContent: "center",

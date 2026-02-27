@@ -16,10 +16,6 @@ const ItemCount = ({ stock, onAdd }) => {
         }
     }
 
-
-    console.log("onAdd:", onAdd)
-
-
   const purchase = () => {
      onAdd(count)
   } 

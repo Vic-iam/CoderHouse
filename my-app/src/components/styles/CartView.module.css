@@ -1,0 +1,114 @@
+.CartViewContainer{
+    padding: 140px 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+.CartViewContainer h1{
+    text-align: center;
+}
+
+.cartCard{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+
+.cartInformation{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.cartIndex{
+    padding: 10px;
+    border:  1px solid #333;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.cartIndex h2{
+    font-size: 1.2rem;
+    color: #260801;
+    font-weight: 600;
+}
+
+.cartIndex p{
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #260801;
+}
+
+.CartViewImg img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.CartViewImg{
+    height: 350px;
+    width: 250px;
+}
+
+.cartBtn{
+    height: 40px;
+    width: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    background-color: #260801;
+    color: white;
+    transition: all 0.4s ease;
+}
+
+.cartBtn:hover{
+    background-color: rgb(102, 44, 44);
+}
+
+@media (max-width: 768px) {
+
+    .CartViewContainer h1{
+        font-size: 1.4rem;
+    }
+    
+    .CartViewImg{
+        height: 200px;
+        width: 150px;
+    }
+
+    .cartIndex{
+        display: flex;
+        align-items: start;
+        justify-content: center;
+        text-align: center;
+        gap: 10px;
+    }
+
+    .cartIndex h2{
+        font-size: 1rem;
+    }
+
+    .cartIndex p{
+        font-size: 0.9rem;
+    }
+
+    .cartInformation{
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .cartBtn{
+        height: 20px;
+        width: 20px;
+    }
+}

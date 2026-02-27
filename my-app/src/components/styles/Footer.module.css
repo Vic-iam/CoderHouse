@@ -1,16 +1,15 @@
 footer {
     background-color: #8C7C6D;
     color: #260801;
-    height: 120px;
 }
 
-.footerContainer {
-    max-width: 1400px;
-    margin: auto;
-    padding: 80px 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    flex-wrap: wrap;
-    gap: 20px;
+.copy {
+  color: #260801;
+  text-align: center;
+  padding: 15px 10px;
+}
+
+.copy h1 {
+  font-size: 1rem;
+  margin: 0;
 }
