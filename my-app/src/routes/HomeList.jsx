@@ -1,5 +1,5 @@
 import style from "./styles/Home.module.css";
-import Goku from "../assets/image/goku.png"
+import Goku from "../assets/image/goku3.png"
 
 function HomeList() {
 

@@ -10,13 +10,11 @@ function Navbar() {
   const [showCat, setShowCat] = useState(false);
   const menuRef = useRef(null);
 
-  // Bloquear scroll cuando menú está abierto
   useEffect(() => {
     document.body.style.overflow = isOpen ? "hidden" : "auto";
     return () => (document.body.style.overflow = "auto");
   }, [isOpen]);
 
-  // Cerrar menú si clic fuera
   useEffect(() => {
     const handler = (e) => {
       if (menuRef.current && !menuRef.current.contains(e.target)) {
