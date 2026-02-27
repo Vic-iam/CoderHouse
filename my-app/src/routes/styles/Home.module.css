@@ -65,6 +65,10 @@
 }
 
 .imagePresentation{
+    height: 300px;
+}
+
+.imagePresentation{
     display: flex;
     align-items: center;
 }

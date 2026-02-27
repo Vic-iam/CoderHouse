@@ -12,7 +12,7 @@ const CartContainer = () => {
     <>
     
      {
-      cart.length 
+      cart.lenght 
       ? <CartView />
       : <EmptyCart />
      }
