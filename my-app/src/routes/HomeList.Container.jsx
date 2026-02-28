@@ -10,7 +10,7 @@ const HomeListContainer = () => {
 
     setTimeout(() =>{
      setIsLoading(false)
-    }, 500)
+    }, 2000)
 
   }, [])
 

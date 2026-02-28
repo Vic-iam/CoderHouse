@@ -2,9 +2,10 @@ import React, { useContext } from "react";
 import { CardContext } from "../context/CartContext";
 import style from "./styles/CartView.module.css";
 import { GoX } from "react-icons/go";
+import { Link } from "react-router-dom";
 
 const CartView = () => {
-  const { cart, removeItem } = useContext(CardContext);
+  const { cart, removeItem, clear, total } = useContext(CardContext);
 
   return (
     <div className={style.CartViewContainer}>
@@ -33,6 +34,11 @@ const CartView = () => {
               </button>
           </div>
         ))}
+        <h2>Total a pagar: ${total()} </h2>
+        <div className={style.buttonOptions}>
+          <button onClick={clear} className={style.btnClear}>Vaciar carrito</button>
+          <Link to="/chekout" className={style.btnShop}>Terminar compra</Link>
+        </div>
       </div>
     </div>
   );

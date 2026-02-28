@@ -158,7 +158,7 @@ export const getProducts = () => {
       } else {
         resolve(mangas);
       }
-    }, 500);
+    }, 2000);
   });
 };
 
@@ -172,7 +172,7 @@ export const getOneProduct = (id) => {
       } else {
         reject("El producto no existe");
       }
-    }, 500);
+    }, 2000);
   });
 };
 
@@ -184,6 +184,6 @@ export const getProductsByCategory = (type) => {
       );
 
       resolve(filtered);
-    }, 500);
+    }, 2000);
   });
 };

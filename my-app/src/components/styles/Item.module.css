@@ -24,8 +24,8 @@
 }
 
 .imageManga{
-    width: 150px;
-    height: 200px;
+    width: 200px;
+    height: 300px;
 }
 
 .infoManga h2{
@@ -45,3 +45,5 @@
     text-align: center;
     padding: 10px;
 }
+
+

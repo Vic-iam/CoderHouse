@@ -1,3 +1,20 @@
 .cartLink{
     position: relative;
 }
+
+.cartPoint{
+    display: flex;
+    gap: 3px;
+    font-size: 1.4rem;
+}
+
+.cartPoint span{
+    background-color: #333;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 0.9rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}

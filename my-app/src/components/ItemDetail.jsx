@@ -35,7 +35,7 @@ const ItemDetail = ({ detail }) => {
         <p>Genero: {detail.genero?.join(",")} </p>
         {purchase ? (
           <Link
-            to="/cartView"
+            to="/cart"
             style={{
               display: "flex",
               justifyContent: "center",

@@ -4,6 +4,7 @@
     align-items: center;
     flex-direction: column;
     gap: 10px;
+    padding: 1%;
 }
 
 .styleCount{
@@ -12,8 +13,6 @@
     align-items: center;
 
     gap: 10px;
-
-    
 
 }
 

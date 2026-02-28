@@ -19,11 +19,11 @@
 }
 
 .EmptyCartContainer a{
-    border: 1px black solid;
     padding: 10px;
     border-radius: 20px;
     font-size: 1.4rem;
     text-align: center;
+    text-decoration: underline;
 }
 
 @media (max-width: 768px) {

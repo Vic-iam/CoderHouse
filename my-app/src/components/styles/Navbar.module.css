@@ -1,5 +1,5 @@
 header {
-  background-color: #8C7C6D;
+  background-color: #8c7c6d;
   height: 100px;
   width: 100%;
   padding: 20px;
@@ -7,7 +7,7 @@ header {
   top: 0;
   position: fixed;
 
-  box-shadow: 0 1px 0 #BFAE9F;
+  box-shadow: 0 1px 0 #bfae9f;
   z-index: 999;
 }
 
@@ -18,14 +18,15 @@ nav {
   height: 100%;
 }
 
-.divLogo img{
+.divLogo img {
   height: 100%;
   width: 100%;
-  }
+}
 
-.divLogo{
+.divLogo {
   height: 80px;
   width: 80px;
+  z-index: 5;
 }
 
 .divLinks {
@@ -36,6 +37,9 @@ nav {
 }
 
 a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-decoration: none;
   color: #260801;
   cursor: pointer;
@@ -46,7 +50,7 @@ a {
   cursor: pointer;
 }
 
-.itemToggle  {
+.itemToggle {
   display: none;
   font-size: 28px;
   background: none;
@@ -55,73 +59,84 @@ a {
   transition: transform 0.2s ease;
 }
 
-.productosDropdown {
-    position: relative;
-    cursor: pointer;
+.dropdownTitle{
+  display: flex;
+  gap: 3px;
+  color: #260801;
 }
 
+.productosDropdown {
+  position: relative;
+  cursor: pointer;
+}
 
-.productosDropdown h2{
+.productosDropdown h2 {
   font-size: 1.1rem;
   color: #260801;
   font-weight: 500;
 }
 
 .dropdownMenu {
-    position: absolute;
-    top: 28px;
-    left: 0;
-    background: white;
-    border-radius: 8px;
-    padding: 10px;
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    min-width: 160px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-    z-index: 999;
-    transition: all 0.4s ease;
+  position: absolute;
+  top: 28px;
+  left: 0;
+  background: white;
+  border-radius: 8px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 160px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  z-index: 999;
+  transition: all 0.4s ease;
 }
 
-
-
-
 .dropdownMenu a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 .dropdownMenu a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
-
 
 .backdrop {
   position: fixed;
   inset: 0;
-  background: rgba(0,0,0,0.4);
+  background: rgba(0, 0, 0, 0.4);
   z-index: 998;
 }
 
 @media (max-width: 768px) {
-
   .divLinks {
     position: fixed;
     top: 0;
-    right: 0;
+    right:  0;
     background-color: #bdac9d;
-    height: 100vh;
-    width: 70%;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    height: 50vh;
+    width: 100%;
     gap: 40px;
-    transform: translateX(100%);
+    transform: translateY(-100%);
     transition: transform 0.4s ease;
     z-index: 999;
   }
 
   .divLinks.open {
-    transform: translateX(0);
+    transform: translateY(0);
+  }
+
+  .divLinks a{
+    display: flex;
+    text-align: center;
+  }
+
+  .divLinks {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 5px;
+    font-size: 1.1rem;
   }
 
   .itemToggle {
@@ -133,10 +148,12 @@ a {
     z-index: 1000;
   }
 
-  .dropdownMenu {
-    position: static;
-    box-shadow: none;
-    background: transparent;
+  .dropdownMenu{
+    height: 300px;
+    min-width: 200px;
+    right: 0;
+    display: flex;
+    justify-content: center;
     align-items: center;
-  }
+  } 
 }

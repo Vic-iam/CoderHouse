@@ -3,6 +3,8 @@
     padding: 140px 40px;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     gap: 20px;
 
 }

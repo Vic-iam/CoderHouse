@@ -14,6 +14,7 @@ import { CardProvider } from "./context/CartContext";
 import CartContainer from "./components/CartContainer";
 import CartView from "./components/CartView";
 import HomeListContainer from "./routes/HomeList.Container";
+import Chekout from "./components/Chekout";
 
 function App() {
   return (
@@ -35,6 +36,8 @@ function App() {
           <Route path="/cartView" element={<CartView />} />
 
           <Route path="/cartWidget" element={<CartWidget />} />
+
+          <Route path="/chekout" element={<Chekout />} />
 
           <Route path="*" element={<Error />} />
         </Routes>

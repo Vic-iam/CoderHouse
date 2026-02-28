@@ -1,15 +1,28 @@
 footer {
-    background-color: #8C7C6D;
-    color: #260801;
+  background-color: #8c7c6d;
+  color: #260801;
 }
 
 .copy {
   color: #260801;
   text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   padding: 15px 10px;
 }
 
 .copy h1 {
   font-size: 1rem;
   margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
+
+.copy a{
+  border: 1px solid black;
+  border-radius: 5px;
 }

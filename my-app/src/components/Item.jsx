@@ -30,7 +30,7 @@ function Item({ producto }) {
 
       {purchase ? (
         <Link
-          to="/cartView"
+          to="/cart"
           style={{
             display: "flex",
             justifyContent: "center",
