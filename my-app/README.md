@@ -10,8 +10,8 @@ Este proyecto fue realizado para el curso de coderhouse
 ### Instalacion
 
 
-1. Clonar el repsitorio.
-2. Moverse a la carpeta creada con el comnado `cd my-app`.
+1. Clonar el repositorio.
+2. Moverse a la carpeta creada con el comando `cd my-app`.
 3. Ejecutar el comando `npm install` para instalar las depedencias y crear la carpeta `node_modules`.
 4. Ejecute el comando `npm run dev` para levantar la app en un entorno local.
 
