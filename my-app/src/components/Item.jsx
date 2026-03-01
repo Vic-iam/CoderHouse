@@ -4,14 +4,26 @@ import ItemButtoDetail from "./ItemButtoDetail";
 import { Link } from "react-router-dom";
 import { CardContext } from "../context/CartContext";
 import { useContext, useState } from "react";
+import Swal from "sweetalert2";
 
 function Item({ producto }) {
-  const { addItem } = useContext(CardContext);
+  const { addItem,getProductQuantity } = useContext(CardContext);
   const [purchase, setPurchase] = useState(false);
+
+  const quantityInCart = getProductQuantity(producto.id);
+  const availableStock = producto.stock - quantityInCart;
 
   const onAdd = (cantidad) => {
     addItem(producto, cantidad);
     setPurchase(true);
+    Swal.fire({
+      position: "top-end",
+      icon: "success",
+      title: `Agregaste ${producto.nombre} a tu carrito`,
+      showCancelButton: false,
+      showConfirmButton: false,
+      timer: 1000
+    })
   };
 
   return (
@@ -42,9 +54,9 @@ function Item({ producto }) {
           Ir al carrito
         </Link>
       ) : (
-        <ItemCount stock={producto.stock} onAdd={onAdd} />
+        <ItemCount stock={availableStock} onAdd={onAdd} />
       )}
-      <h3>Stock: {producto.stock}</h3>
+      <h3>Stock: {availableStock}</h3>
     </div>
   );
 }

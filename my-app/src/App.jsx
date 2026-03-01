@@ -14,7 +14,7 @@ import { CardProvider } from "./context/CartContext";
 import CartContainer from "./components/CartContainer";
 import CartView from "./components/CartView";
 import HomeListContainer from "./routes/HomeList.Container";
-import Chekout from "./components/Chekout";
+import Chekout from "./components/Checkout";
 
 function App() {
   return (
@@ -32,12 +32,12 @@ function App() {
           <Route path="/categoria/:type" element={<ItemListContainer />} />
 
           <Route path="/cart" element={<CartContainer />} />
- 
+
           <Route path="/cartView" element={<CartView />} />
 
           <Route path="/cartWidget" element={<CartWidget />} />
 
-          <Route path="/chekout" element={<Chekout />} />
+          <Route path="/checkout" element={<Chekout />} />
 
           <Route path="*" element={<Error />} />
         </Routes>

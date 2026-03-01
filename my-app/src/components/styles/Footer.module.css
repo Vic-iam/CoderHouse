@@ -25,3 +25,9 @@ footer {
 .copy a{
   border-radius: 5px;
 }
+
+@media (max-width: 768px) {
+  .copy h1{
+    font-size: 0.8rem;
+  }
+}

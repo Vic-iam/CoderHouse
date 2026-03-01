@@ -4,14 +4,26 @@ import { GoChevronLeft } from "react-icons/go";
 import { Link } from "react-router-dom";
 import ItemCount from "./ItemCount";
 import { CardContext } from "../context/CartContext";
+import Swal from "sweetalert2";
 
 const ItemDetail = ({ detail }) => {
-  const { addItem } = useContext(CardContext);
+  const { addItem,getProductQuantity  } = useContext(CardContext);
   const [purchase, setPurchase] = useState(false);
+  const quantityInCart = getProductQuantity(detail.id);
+  const availableStock = detail.stock - quantityInCart;
+  
 
   const onAdd = (cantidad) => {
     addItem(detail, cantidad);
     setPurchase(true);
+    Swal.fire({
+      position: "top-end",
+      icon: "success",
+      title: `Agregaste ${detail.nombre} a tu carrito`,
+      showCancelButton: false,
+      showConfirmButton: false,
+      timer: 1000
+    })
   };
 
   return (
@@ -47,10 +59,10 @@ const ItemDetail = ({ detail }) => {
             Ir al carrito
           </Link>
         ) : (
-          <ItemCount stock={detail.stock} onAdd={onAdd} />
+          <ItemCount stock={availableStock} onAdd={onAdd} />
         )}
         <p style={{ textAlign: "center", opacity: "0.8" }}>
-          Stock: {detail.stock}
+          Stock: {availableStock}
         </p>
       </div>
 

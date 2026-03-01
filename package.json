@@ -1,5 +1,8 @@
 {
   "dependencies": {
-    "react-spinners": "^0.17.0"
+    "react-hook-form": "^7.71.2",
+    "react-hot-toast": "^2.6.0",
+    "react-spinners": "^0.17.0",
+    "sweetalert2": "^11.26.21"
   }
 }

@@ -8,11 +8,9 @@ function HomeList() {
 
       <section className={style.presentationHome}>
         <div className={style.borderPresentation}>
-
           <div className={style.imagePresentation}>
             <img src={Goku} alt="Goku" />
           </div>
-
           <div className={style.titleHome}>
             <h1>Descubrí los mejores mangas</h1>
             <p>Explorá nuevas historias, géneros y autores</p>
@@ -21,10 +19,8 @@ function HomeList() {
               Ver Catálogo
             </Link>
           </div>
-
         </div>
       </section>
-
       <section className={style.categoriesSection}>
         <h2>Categorías Populares</h2>
 
@@ -34,11 +30,6 @@ function HomeList() {
           <div className={style.categoryCard}>Shojo</div>
           <div className={style.categoryCard}>Isekai</div>
         </div>
-      </section>
-
-      <section className={style.featureSection}>
-        <h2>Mangas Destacados</h2>
-        <p>Los títulos más vendidos del momento</p>
       </section>
 
     </div>
