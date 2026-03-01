@@ -25,7 +25,7 @@ const CartView = () => {
               <p>Stock: {compra.stock} </p>
               <p>Precio final: ${compra.precio * compra.stock},00 </p>
               </div>
-
+               
               <button
                 onClick={() => removeItem(compra.id)}
                 className={style.cartBtn}
@@ -34,6 +34,9 @@ const CartView = () => {
               </button>
           </div>
         ))}
+
+       <div className={style.linea}></div>
+
         <h2>Total a pagar: ${total()} </h2>
         <div className={style.buttonOptions}>
           <button onClick={clear} className={style.btnClear}>Vaciar carrito</button>

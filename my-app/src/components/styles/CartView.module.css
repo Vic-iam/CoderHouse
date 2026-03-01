@@ -14,24 +14,25 @@
 .cartCard{
     display: flex;
     flex-direction: column;
-    gap: 50px;
+    gap: 10px;
 
 }
 
 
 .cartInformation{
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
     gap: 20px;
+    padding: 10px;
 }
 
 .cartIndex{
+    border: 1px solid black;
     padding: 10px;
-    border:  1px solid #333;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: center;
+    align-items: start;
     gap: 20px;
 }
 
@@ -51,6 +52,7 @@
     height: 100%;
     width: 100%;
     object-fit: cover;
+    display: flex;
 }
 
 .CartViewImg{
@@ -59,8 +61,8 @@
 }
 
 .cartBtn{
-    height: 40px;
-    width: 40px;
+    height: 20px;
+    width: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -95,6 +97,14 @@
 .btnShop {
     background-color: #10651B;
     color: white;
+}
+
+.linea{
+    background-color: #333;
+    width: 80%;
+    height: 1px;
+    margin: 10px auto;
+    opacity: 0.5;
 }
 
 @media (max-width: 768px) {

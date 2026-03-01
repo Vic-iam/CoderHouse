@@ -1,0 +1,66 @@
+.formContainer {
+  padding: 140px 100px;
+  height: 95vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+}
+
+.formContainer h1 {
+  text-align: center;
+  font-size: 1.4rem;
+}
+
+.formStyle {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.formStyle label {
+  font-size: 1rem;
+}
+
+.formStyle input {
+  font-size: 0.9rem;
+  width: 400px;
+  height: 40px;
+  padding: 10px;
+
+  transition: all ease 0.4s;
+  border: 1px solid #333;
+  opacity: 0.5;
+}
+
+.formStyle input:focus {
+  border: none;
+  background-color: white;
+  color: white;
+  opacity: 0.8;
+}
+
+.formStyle input:active {
+  transform: scale(0.98);
+}
+
+.banner {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+
+.btnCompra {
+  display: flex;
+  justify-content: center;
+}
+
+.btnCompra button {
+  padding: 10px;
+  font-size: 0.9rem;
+  border-radius: 10px;
+  background-color: #10651b;
+  color: white;
+  opacity: 0.9;
+}
