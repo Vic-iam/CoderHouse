@@ -6,9 +6,9 @@ const Loading = ({ text }) => {
 
 
   return (
-    <div style={{display: "flex", justifyContent: "center", alignItems: "center",flexDirection: "column", width: "100%", height: "95vh", gap: "20px"}}> 
+    <div style={{display: "flex", justifyContent: "center", alignItems: "center",flexDirection: "column", width: "100%", height: "92vh", gap: "20px"}}> 
     
-    <BeatLoader size={15} margin={2} />
+    <BeatLoader size={30} margin={2} />
 
     <p> {text} </p>
     

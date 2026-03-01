@@ -12,6 +12,11 @@
   font-size: 1.4rem;
 }
 
+.formContainer span{
+  color: red;
+  text-align: center;
+}
+
 .formStyle {
   display: grid;
   justify-content: center;
@@ -36,8 +41,6 @@
 
 .formStyle input:focus {
   border: none;
-  background-color: white;
-  color: white;
   opacity: 0.8;
 }
 

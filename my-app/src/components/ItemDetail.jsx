@@ -23,7 +23,7 @@ const ItemDetail = ({ detail }) => {
             className={style.icon}
             onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
           >
-            <GoChevronLeft /> Regresar
+            <GoChevronLeft />
           </Link>
         </div>
         <div className={style.imgStyle}>

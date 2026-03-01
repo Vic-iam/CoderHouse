@@ -10,6 +10,8 @@ function Navbar() {
   const [showCat, setShowCat] = useState(false);
   const menuRef = useRef(null);
 
+  
+
   useEffect(() => {
     document.body.style.overflow = isOpen ? "hidden" : "auto";
     return () => (document.body.style.overflow = "auto");
@@ -84,7 +86,7 @@ function Navbar() {
             )}
           </div>
 
-          <CartWidget />
+          <CartWidget onClick={handleLinkClick} />
         </div>
 
         <button

@@ -32,7 +32,7 @@ function App() {
           <Route path="/categoria/:type" element={<ItemListContainer />} />
 
           <Route path="/cart" element={<CartContainer />} />
-
+ 
           <Route path="/cartView" element={<CartView />} />
 
           <Route path="/cartWidget" element={<CartWidget />} />

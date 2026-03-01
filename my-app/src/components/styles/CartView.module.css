@@ -1,97 +1,179 @@
-.CartViewContainer{
-    padding: 140px 100px;
+.CartViewContainer {
+    padding: 140px 20px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    gap: 50px;
+    justify-content: center;
+    gap: 40px;
 }
 
-.CartViewContainer h1{
-    text-align: center;
+.CartViewContainer h1 {
+    font-size: 2rem;
+    color: #260801;
 }
 
-.cartCard{
+.cartCard {
+    width: 100%;
+    max-width: 900px;
     display: flex;
     flex-direction: column;
-    gap: 10px;
-
-}
-
-
-.cartInformation{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-    padding: 10px;
-}
-
-.cartIndex{
-    border: 1px solid black;
-    padding: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: start;
     gap: 20px;
 }
 
-.cartIndex h2{
+.cartIndex {
+    position: relative;
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    border-radius: 12px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.cartIndex:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+
+.CartViewImg {
+    height: 180px;
+    width: 140px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.CartViewImg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.cartInformation {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.cartInformation h2 {
     font-size: 1.2rem;
     color: #260801;
     font-weight: 600;
 }
 
-.cartIndex p{
+.cartInformation p {
+    font-size: 1rem;
+    color: #333;
+}
+
+.cartBtn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    border: none;
+    background-color: #260801;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.cartBtn:hover {
+    background-color: #b3261e;
+    transform: scale(1.1);
+}
+
+.counterBox {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background-color: #f4f4f4;
+    padding: 6px 12px;
+    border-radius: 50px;
+}
+
+.counterBox button {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    border: none;
+    background-color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.counterBox button:hover {
+    background-color: #ddd;
+}
+
+.counterBox button:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
+.counterBox button:active {
+    transform: scale(0.9);
+}
+
+.count {
+    min-width: 20px;
+    text-align: center;
     font-size: 1.1rem;
-    font-weight: 600;
+    font-weight: bold;
+    animation: countPop 0.25s ease;
+}
+
+.subtotal {
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+.totalSection {
+    margin-top: 30px;
+    padding: 20px;
+    border-radius: 12px;
+    background-color: #fafafa;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.totalSection h2 {
+    font-size: 1.5rem;
     color: #260801;
 }
 
-.CartViewImg img{
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
+.buttonOptions {
     display: flex;
+    gap: 15px;
 }
 
-.CartViewImg{
-    height: 250px;
-    width: 150px;
-}
-
-.cartBtn{
-    height: 20px;
-    width: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 100%;
-    background-color: #260801;
-    color: white;
-    transition: all 0.4s ease;
-}
-
-.cartBtn:hover{
-    background-color: rgb(102, 44, 44);
-}
-
-.buttonOptions{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
+.buttonOptions button,
+.buttonOptions a {
+    padding: 10px 18px;
+    border-radius: 8px;
+    font-size: 1rem;
+    text-decoration: none;
     border: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
 }
 
-.buttonOptions button, a{
-    font-size: 1.1rem;
-    padding: 5px;
-}
-
-.btnClear{
+.btnClear {
     background-color: #6A1B0C;
     color: white;
+}
+
+.btnClear:hover {
+    background-color: #8b2412;
 }
 
 .btnShop {
@@ -99,50 +181,48 @@
     color: white;
 }
 
-.linea{
-    background-color: #333;
-    width: 80%;
-    height: 1px;
-    margin: 10px auto;
-    opacity: 0.5;
+.btnShop:hover {
+    background-color: #148a24;
+}
+
+@keyframes countPop {
+    0% {
+        opacity: 0;
+        transform: translateY(-8px) scale(0.9);
+    }
+    50% {
+        transform: scale(1.15);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
 }
 
 @media (max-width: 768px) {
 
-    .CartViewContainer h1{
-        font-size: 1.4rem;
-    }
-    
-    .CartViewImg{
-        height: 200px;
-        width: 150px;
+    .CartViewContainer {
+        padding: 100px 15px;
     }
 
-    .cartIndex{
-        display: flex;
-        align-items: start;
-        justify-content: center;
-        text-align: center;
-        gap: 10px;
-    }
-
-    .cartIndex h2{
-        font-size: 1rem;
-    }
-
-    .cartIndex p{
-        font-size: 0.9rem;
-    }
-
-    .cartInformation{
-        display: grid;
-        justify-content: center;
+    .cartIndex {
+        flex-direction: column;
         align-items: center;
         text-align: center;
     }
 
-    .cartBtn{
-        height: 20px;
-        width: 20px;
+    .CartViewImg {
+        width: 120px;
+        height: 160px;
+    }
+
+    .buttonOptions {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .buttonOptions button,
+    .buttonOptions a {
+        width: 100%;
     }
 }

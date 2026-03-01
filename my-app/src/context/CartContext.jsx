@@ -21,6 +21,16 @@ export const CardProvider = ({ children }) => {
     }
   };
 
+  const updateQuantity = (id, qty) => {
+  setCart(
+    cart.map((prod) =>
+      prod.id === id
+        ? { ...prod, cantidad: qty }
+        : prod
+    )
+  );
+};
+
   const clear = () => {
     setCart([]);
   };
@@ -52,6 +62,7 @@ export const CardProvider = ({ children }) => {
           isInCart,
           total,
           cartCantidad,
+          updateQuantity,
         }}
       >
         {children}
