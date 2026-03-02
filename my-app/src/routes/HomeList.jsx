@@ -3,6 +3,11 @@ import Goku from "../assets/image/goku3.png";
 import { Link } from "react-router-dom";
 
 function HomeList() {
+
+    const handleLinkClick = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
   return (
     <div className={style.containerHome}>
 
@@ -15,7 +20,7 @@ function HomeList() {
             <h1>Descubrí los mejores mangas</h1>
             <p>Explorá nuevas historias, géneros y autores</p>
 
-            <Link to="/productos" className={style.ctaButton}>
+            <Link to="/productos" className={style.ctaButton} onClick={handleLinkClick}>
               Ver Catálogo
             </Link>
           </div>
