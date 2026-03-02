@@ -47,3 +47,11 @@
 }
 
 
+@media (max-width: 768px) {
+    .mangaCard{
+        display: grid;
+        justify-content: center;
+        width: 250px;
+        padding: 10px;
+    }
+}

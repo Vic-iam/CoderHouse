@@ -108,12 +108,17 @@ a {
 }
 
 @media (max-width: 768px) {
+
+  header{
+    height: 60px;
+  }
+
   .divLinks {
     position: fixed;
     top: 0;
     right:  0;
     background-color: #bdac9d;
-    height: 50vh;
+    height: 30vh;
     width: 100%;
     gap: 40px;
     transform: translateY(-100%);
@@ -137,6 +142,11 @@ a {
     text-align: center;
     gap: 5px;
     font-size: 1.1rem;
+  }
+
+  .divLogo{
+    height: 50px;
+    width: 50px;
   }
 
   .itemToggle {
