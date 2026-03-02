@@ -21,9 +21,9 @@
   background-color: #ffff;
   box-shadow: 0 4px 15px rgba(0,0,0,0.08);
   padding: 20px;
-  min-height: 150px;
   display: grid;
   justify-content: center;
+  height: 600px;
   align-items: center;
   gap: 10px;
 }
@@ -109,9 +109,7 @@
   }
 
   .formStyle{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    height: 1000px;
     gap: 20px;
   }
 
