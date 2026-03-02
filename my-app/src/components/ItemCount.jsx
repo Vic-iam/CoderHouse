@@ -30,7 +30,6 @@ const ItemCount = ({ stock, onAdd }) => {
         >
           -
         </button>
-
         <div className={style.countNumber}>
           <span>{count}</span>
         </div>
