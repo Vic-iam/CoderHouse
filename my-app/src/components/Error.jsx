@@ -1,4 +1,3 @@
-import React from 'react'
 import style from "./styles/Error.module.css"
 import lupa from "../assets/image/lupa.png"
 

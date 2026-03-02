@@ -2,7 +2,7 @@ import style from "./styles/Navbar.module.css";
 import { Link, NavLink } from "react-router-dom";
 import { useRef, useState, useEffect } from "react";
 import CartWidget from "./CartWidget";
-import { FaChevronDown, FaUser, FaBars, FaTimes } from "react-icons/fa";
+import { FaChevronDown, FaBars, FaTimes } from "react-icons/fa";
 import logo from "../assets/image/logo.png";
 
 function Navbar() {

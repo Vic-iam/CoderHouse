@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import { useContext } from "react";
 import style from "./styles/CartWidget.module.css";
 import { CiShoppingCart } from "react-icons/ci";
 import { NavLink } from "react-router-dom";

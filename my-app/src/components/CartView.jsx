@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import { useContext } from "react";
 import { CardContext } from "../context/CartContext";
 import style from "./styles/CartView.module.css";
 import { GoX } from "react-icons/go";

@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import { useContext, useState } from "react";
 import style from "./styles/ItemDetail.module.css";
 import { GoChevronLeft } from "react-icons/go";
 import { Link } from "react-router-dom";
