@@ -1,4 +1,4 @@
-import style from "./styles/item.module.css";
+import style from "./styles/Item.module.css";
 import ItemCount from "./ItemCount";
 import ItemButtoDetail from "./ItemButtoDetail";
 import { Link } from "react-router-dom";
