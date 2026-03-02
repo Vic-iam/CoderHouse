@@ -201,9 +201,6 @@
 
 @media (max-width: 768px) {
 
-    .CartViewContainer {
-        padding: 100px 15px;
-    }
 
     .cartIndex {
         flex-direction: column;

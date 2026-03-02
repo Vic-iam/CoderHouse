@@ -19,6 +19,7 @@
 
 .formStyle {
   background-color: #ffff;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
   padding: 20px;
   min-height: 150px;
   display: grid;
@@ -97,12 +98,21 @@
 }
 
 @media (max-width: 768px) {
+
+  .formContainer{
+    padding: 150px 18px;
+    height: 95vh;
+  }
   
   .formStyle input {
     width: 300px;
   }
 
   .formStyle{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
   }
 
   .formStyle span{
