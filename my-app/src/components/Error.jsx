@@ -1,22 +1,16 @@
-import style from "./styles/Error.module.css"
-import lupa from "../assets/image/lupa.png"
+import style from "./styles/Error.module.css";
+import lupa from "../assets/image/lupa.png";
 
 const Error = () => {
   return (
-
     <div className={style.errorContainer}>
+      <h2>Error....Busqueda no encontrada</h2>
 
-    <h2>Error....Busqueda no encontrada</h2>
-
-   <div className={style.lupaStyle}>
-
-    <img src={lupa} alt='Error' />
-
-   </div>
-
+      <div className={style.lupaStyle}>
+        <img src={lupa} alt="Error" />
+      </div>
     </div>
+  );
+};
 
-  )
-}
-
-export default Error
+export default Error;
